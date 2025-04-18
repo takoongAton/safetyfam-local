@@ -224,6 +224,19 @@ div.chat_guard_wrap .btn_more span {color:#3B3B3B; font-size:14px; line-height:2
 /* // 채팅 카드 (리스트) */
 
 
+/* 긴급 호출 */
+/* Circle Graph */
+.signal_zero-progress-circle {position:relative; /* top:30px; left:50%; */ width:150px; height:150px; border-radius:100%; box-shadow:0 1px 6px rgba(0,0,0,0.16); /* margin-left:-150px; */}
+.signal_zero-progress-circle svg {position:absolute; width:150px; height:150px;}
+.signal_zero-progress-circle svg circle {fill:transparent;}
+.signal_zero-progress-circle svg .signal_zero-background-circle {fill:transparent; stroke-width:10px; stroke:transparent; stroke-dasharray:377;}
+.signal_zero-progress-circle svg .signal_zero-animated-circle {fill:transparent; stroke-width:10px; stroke:#ff0f6b; stroke-dasharray:377; stroke-dashoffset:377 - 20;}
+.signal_zero-progress-circle .signal_zero-progress-circle-count {display:flex; justify-content:center;align-items:center; position:absolute; top:50%; left:50%; width:100%; height:100%; text-align:center; color:#FF0F6B; font-size:44px; line-height:50px; font-weight:bold; transform:translate(-50%,-50%);}
+.signal_zero-progress-circle .signal_zero-progress-circle-chk {display:flex; justify-content:center; align-items:center; position:absolute; top:50%; left:50%; width:130px; height:130px; border-radius:100%; border:10px solid #ff0f6b; transform:translate(-50%,-50%);}
+.signal_zero-progress-circle .signal_zero-progress-circle-chk img {display:inline-block; width:50px; height:50px;}
+.signal_zero p.txt {margin-top:36px; color:#000; font-size:20px; line-height:29px; font-weight:bold; text-align:center;}
+/* // 긴급 호출 */
+
 
 /* 회원가입/로그인 안내 */
 .login_temp {display:flex; flex-direction:column; gap:35px; padding:24px 18px;}
