@@ -20,6 +20,7 @@
 <div class="wrap">
 
 
+
 	<div class="container_wrap">
 
 		<section class="container">
@@ -27,28 +28,25 @@
 			<div class="content_wrap divide">
 
 				<div class="content_center">
-					<div class="logo">
-						<span style="display:inline-flex; justify-content:center; align-items:center; width:118px; height:auto;">
-							<img src="../../images/temp/logo_temp.png" alt="로고" />
-						</span>
-					</div>
-				</div>
-				<div class="content_btm">
-					<div class="login_temp">
-						<div class="txt_wrap">
-							<strong class="tit">자녀안전지킴이</strong>
-							<p class="txt">자녀의 위치정보를 기반으로 위험 지역 알림,<br />
-							SOS 발신, 언어/채팅 모니터링 등<br />
-							종합적인 자녀 안전 관리 서비스</p>
-						</div>
-						<div class="btn_group">
-							<button type="button" class="btn_login"><span>로그인</span></button>
-							<button type="button" class="btn_join"><span>회원가입</span></button>
-						</div>
-					</div>
-				</div>
 
-			</div><!-- // content_wrap -->
+					<div class="error">
+						<div class="img"><img src="../../images/common/ico_caution.png" alt="아이콘"></div>
+						<div class="tit">[작업공지]<br /><br />
+							00월 00일 00:00 ~ 00월 00일 00:00</div>
+						<p class="txt">텍스트가 노출됩니다.<br /> 
+							텍스트가 노출됩니다.<br />
+							텍스트가 노출됩니다.</p>
+						<button type="button" class="btn">
+							<!-- <span class="ico"><img src="../../images/common/ico_btn_refresh.png" alt="새로고침 아이콘"></span> -->
+							<span class="txt">확인</span>
+						</button>
+					</div>
+
+				</div>
+				<!-- // content_center -->
+
+			</div>
+			<!-- // content_wrap -->
 			
 		</section><!-- // container -->
 		
@@ -71,26 +69,13 @@
 
 
 
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- <script src="../../js/slick.js"></script> -->
 <script src="../../js/temp.js"></script>
 
-
-<script>
-
-/* 공지사항, 자주 묻는 질문 */
-let noticeWrap = document.querySelector(".notice_arcodian_wrap")
-if(noticeWrap) {
-	let listItems = document.querySelectorAll(".list .item");
-	listItems.forEach(function(item){
-		item.addEventListener("click", function(){
-			item.classList.toggle("active");
-		})
-	})
-}
-/* // 공지사항, 자주 묻는 질문 */
-
-</script>
 
 </body>
 </html>

@@ -26,9 +26,9 @@
 				<!-- <button type="button"><span><img src="../../images/common/ico_home.png" alt="홈"></span></button> -->
 			</div>
 			<h1><strong>이용 안내</strong></h1>
-			<!-- <div class="tools">
+			<div class="tools">
 				<button type="button"><span><img src="../../images/common/ico_noti.png" alt="알림"></span></button>
-			</div> -->
+			</div>
 		</div>
 		<!-- // temp 삭제 -->
 	</div>
@@ -103,7 +103,15 @@
 					</div>
 
 				</div>
-				<!-- // content_center -->
+				<!-- // content_mid -->
+
+				<div class="content_btm">
+					<div class="btm_btn">
+						<div>
+							<button type="button" class="btn_next"><span>시작하기</span></button>
+						</div>
+					</div>
+				</div>
 
 			</div><!-- // content_wrap -->
 			
@@ -112,24 +120,19 @@
 	</div><!-- // container_wrap -->
 
 
-	<!-- <div class="footer_wrap">
-		<div class="btnGroup">
-			<div>
-				<button type="button" class="btn line" disabled=""><span>취소</span></button>
-			</div>
-			<div>
-				<button type="button" class="btn fill"><span>확인</span></button>
-			</div>
-		</div>
-	</div> -->
-	<!-- // footer_wrap (하단 고정 영역) -->
-
 </div><!-- // wrap -->
 
 
 
-
-
+<style>
+.guide_slide_dot li.slick-active button {position:relative;}
+.guide_slide_dot li.slick-active button::after {content:""; display:block; position:absolute; top:0px; left:0px; width:0px; height:100%; border-radius:10px; background-color:rgba(255,255,255,0.4); animation: anitest123 4000ms 1 linear forwards;}
+/* .guide_slide_dot li.slick-active button::after {animation-play-state: paused;} */
+@keyframes anitest123 {
+0% {width:0%;}
+100% {width:100%;}
+}
+</style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../../js/slick.js"></script>
@@ -145,6 +148,8 @@ $(document).ready(function(){
 			dotsClass: "guide_slide_dot",
 			infinite: true,
 			arrows: false,
+			autoplay : true,
+			autoplaySpeed: 4000,
 			// centerMode: true,
 			// centerPadding : '18px'
 		});

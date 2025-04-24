@@ -45,9 +45,9 @@
 					<div class="list_filter">
 						<div class="list_select_wrap">
 							<div class="inner">
-								<div class="triger"><button type="button" class="btn_triger"><span>가나다라마바사아가나다라마바사아</span></button></div>
+								<div class="triger"><button type="button" class="btn_triger"><span>나나</span></button></div>
 								<ul class="">
-									<li><span>니니니니니니니니니니니니니니니니</span></li>
+									<li><span>니니</span></li>
 								</ul>
 							</div>
 						</div>
@@ -59,8 +59,17 @@
 				<div class="content_center">
 
 					<div class="signal_zero">
-						<div style="height:150px;">
-							<div class="alert_img"><img src="../../images/common/img_complete.png" alt=""></div>
+						<div class="signal_zero-progress-circle">
+							<svg>
+								<g>
+									<circle cx="-25" cy="25" r="60" class="signal_zero-background-circle" transform="translate(50,50) rotate(-90)" stroke-linecap="round" />
+								</g>
+								<g>
+									<circle cx="-25" cy="25" r="60" class="signal_zero-animated-circle" transform="translate(50,50) rotate(-90)" stroke-linecap="round" />
+								</g>
+							</svg>
+							<div class="signal_zero-progress-circle-count">0</div>
+							<!-- <div class="signal_zero-progress-circle-chk"><img src="../../images/temp/ico_complete.png" alt="전송완료"></div> -->
 						</div>
 						<p class="txt">
 							<strong>긴급 호출 전송</strong>
@@ -68,19 +77,18 @@
 					</div>
 					<!-- // signal_zero -->
 
-					
-
 				</div>
 				<!-- // content_center -->
 
 				<div class="content_btm">
 					<div class="btm_btn">
 						<div>
-							<!-- <button type="button" class="btn_cancel"><span>취소</span></button> -->
-							<button type="button" class="btn_next"><span>긴급 호출</span></button>
+							<button type="button" class="btn_cancel"><span>취소</span></button>
+							<!-- <button type="button" class="btn_next"><span>확인</span></button> -->
 						</div>
 					</div>
 				</div>
+				<!-- // content_btm -->
 
 			</div><!-- // content_wrap -->
 			

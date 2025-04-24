@@ -125,13 +125,15 @@ observerFn();
 
 
 /* 목록 보기 필터 테스트 */
-let list_select_wrap = document.querySelector(".list_select_wrap");
+let list_select_wrap = document.querySelectorAll(".list_select_wrap");
 if(list_select_wrap) {
-	let btn_triger = list_select_wrap.querySelector("button.btn_triger");
-	btn_triger.addEventListener("click", function(){
-        btn_triger.classList.toggle("active");
-		list_select_wrap.querySelector("ul").classList.toggle("active");
-	})
+    list_select_wrap.forEach(function(item){
+        let btn_triger = item.querySelector("button.btn_triger");
+        btn_triger.addEventListener("click", function(){
+            btn_triger.classList.toggle("active");
+            item.querySelector("ul").classList.toggle("active");
+	    })    
+    })
 }
 /* // 목록 보기 필터 테스트 */
 
