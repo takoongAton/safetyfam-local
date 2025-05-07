@@ -112,8 +112,9 @@ div.header {box-sizing:border-box; position:fixed; left:0; width:100%; padding:0
 .aside ul {margin-top:73px; padding:0 20px 0 24px;}
 .aside ul li {}
 .aside ul li + li {margin-top:24px;}
-.aside ul li a {display:inline-block; position:relative; color:#fff; font-size:24px; line-height:36px; text-decoration:none;}
-.aside ul li a span {color:#fff;}
+.aside ul li a {display:inline-block; position:relative; color:#fff; font-size:24px; line-height:36px; font-weight:400; text-decoration:none;}
+.aside ul li a span {color:#fff; font-weight:400;}
+.aside ul li a.active {font-weight:500;}
 .aside ul li a.active::before {content:""; display:block; position:absolute; bottom:0; left:0; width:100%; height:1px; background-color:#fff;}
 
 .aside div.btn-close {text-align:right;}
@@ -174,7 +175,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 }
 
 @media only screen and (max-width:786px) {
-	.main_visual_wrap {background:url('../images/img_main_bg01.jpg') no-repeat left 0% top / cover; animation: mainBgAni 10s 1s infinite ease-in-out;}
+	.main_visual_wrap {background:url('../images/img_main_bg01.jpg') no-repeat left 0% top / cover; animation: mainBgAni 16s 1s infinite ease-in-out;}
 	.main_txt {top:15%; transform:translate(-50%, 0);}
 	.main_txt div.tit {padding:0 20px; font-size:38px;}
 	.main_txt p.txt {margin-top:19px; padding:0 20px;}
@@ -191,9 +192,9 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 @keyframes mainBgAni {
 	0% {background-position:left 0 top;}
 	10% {background-position:left 0 top;}
-	30% {background-position:left 100% top;}
+	40% {background-position:left 100% top;}
 	50% {background-position:left 100% top;}
-	70% {background-position:left 100% top;}
+	60% {background-position:left 100% top;}
 	90% {background-position:left 0 top;}
 	100% {background-position:left 0 top;}
 }
