@@ -24,13 +24,13 @@
 			<div class="util">
 				<button type="button"><span><img src="../../images/common/ico_back.png" alt="이전"></span></button>
 				<!-- <button type="button"><span><img src="../../images/common/ico_home.png" alt="홈"></span></button> -->
-				<button type="button" class="btn_de" style="background-color:#ff6600; border-radius:2px;"><span>de</span></button>
-				<button type="button" class="btn_min" style="background-color:#ff6600; border-radius:2px;"><span>min</span></button>
-				<button type="button" class="btn_max" style="background-color:#ff6600; border-radius:2px;"><span>max</span></button>
-				<button type="button" class="btn_del" style="background-color:#ff6600; border-radius:2px;"><span>del</span></button>
-				<button type="button" class="btn_add" style="background-color:#ff6600; border-radius:2px;"><span>add</span></button>
+				<!-- <button type="button" class="btn_de" style="background-color:#ff6600; border-radius:2px;"><span>기본</span></button>
+				<button type="button" class="btn_min" style="background-color:#ff6600; border-radius:2px;"><span>최소</span></button>
+				<button type="button" class="btn_max" style="background-color:#ff6600; border-radius:2px;"><span>최대</span></button> -->
+				<!-- <button type="button" class="btn_del" style="background-color:#ff6600; border-radius:2px;"><span>del</span></button>
+				<button type="button" class="btn_add" style="background-color:#ff6600; border-radius:2px;"><span>add</span></button> -->
 			</div>
-			<!-- <h1><strong></strong></h1> -->
+			<h1><strong>자녀안전지킴이</strong></h1>
 			<div class="tools">
 				<button type="button"><span><img src="../../images/common/ico_noti.png" alt="알림"></span></button>
 			</div>
@@ -80,16 +80,16 @@
 
 
 <style>
-.home_fam_layer {position:absolute; bottom:0; left:0; right:0; width:100%; max-width:720px; height:0; margin:0 auto; transition:all 0.4s ease-in-out;}
-.home_fam_layer.de {height:334px; overflow:hidden;}
-.home_fam_layer.min {height:137px; overflow:hidden;}
-.home_fam_layer.max {height:90vh; overflow-y:auto;}
+.home_fam_layer {position:absolute; bottom:0; left:0; right:0; width:100%; max-width:720px; height:0; max-height:90%; margin:0 auto; transition:all 0.4s ease-in-out; overflow-y:auto;}
+/* .home_fam_layer.de {overflow-y:hidden;} */
+/* .home_fam_layer.min {overflow-y:hidden;} */
+/* .home_fam_layer.max {height:90vh;} */
 </style>
 
 
 <div class="layer bottom">
 
-	<div class="home_fam_layer de">
+	<div class="home_fam_layer">
 		<div class="layer_triger"><button type="button" class="btn_triger"><span>드래그버튼</span></button></div>
 
 		<div class="inner">
@@ -97,7 +97,7 @@
 				<ul class="scroll">
 					<li class="item">
 						<div>
-							<div class="home_fam_sel active">
+							<div class="home_fam_sel all active">
 								<span class="img"><img src="../../images/temp/img_all_fam.png" alt="이미지"></span>
 								<span class="txt">전체</span>
 							</div>
@@ -106,8 +106,8 @@
 					<li class="item">
 						<div>
 							<div class="home_fam_sel">
-								<span class="img"><img src="../../images/temp/img_profile_01.png" alt="이미지"></span>
-								<span class="txt">나나</span>
+								<span class="img"><img src="../../images/temp/temp_profile.jpg" alt="이미지"></span>
+								<span class="txt">윈터</span>
 							</div>
 						</div>
 					</li>
@@ -115,7 +115,7 @@
 						<div>
 							<div class="home_fam_sel">
 								<span class="img"><img src="../../images/temp/img_profile_02.png" alt="이미지"></span>
-								<span class="txt">토니</span>
+								<span class="txt">토니토니토니토니토니토니토니토니</span>
 							</div>
 						</div>
 					</li>
@@ -140,11 +140,11 @@
 			<!-- // home_fam_list -->
 	
 	
-			<div class="home_fam_loc_list">
+			<div class="home_fam_loc_list" style="display:none;">
 				<ul class="list">
 					<li class="item">
 						<div class="thum">
-							<span class="img"><img src="../../images/temp/img_profile_01.png" alt="이미지"></span>
+							<span class="img"><img src="../../images/temp/temp_profile.jpg" alt="이미지"></span>
 						</div>
 						<div class="txt_wrap">
 							<strong class="name">나나</strong>
@@ -192,21 +192,17 @@
 			</div>
 			<!-- // home_fam_util -->
 	
-	
 			<div class="home_fam_bnr">
 				<div class="bnr_slick">
 					<div class="item"><img src="../../images/temp/bnr_temp.png" alt="배너"></div>
 					<div class="item"><img src="../../images/temp/bnr_temp.png" alt="배너"></div>
 					<div class="item"><img src="../../images/temp/bnr_temp.png" alt="배너"></div>
+					<div class="item"><img src="../../images/temp/bnr_temp.png" alt="배너"></div>
 				</div>
 			</div>
-<style>
-.home_notice {padding-bottom:12px; background-color:#fff;}
-.home_notice ul {display:flex; justify-content:center;}
-.home_notice ul li {position:relative;}
-.home_notice ul li span {display:block; padding:0 24px; color:#9F9F9F; font-size:14px; line-height:20px;}
-.home_notice ul li + li::before {content:""; display:block; position:absolute; top:50%; left:0; width:0.5px; height:10px; background-color:#ccc; transform:translateY(-50%); }
-</style>
+			<!-- // home_fam_bnr -->
+
+
 			<div class="home_notice">
 				<ul>
 					<li><span>공지사항</span></li>
@@ -214,6 +210,7 @@
 					<li><span>이용 안내</span></li>
 				</ul>
 			</div>
+			<!-- // home_notice -->
 	
 	
 			<div class="home_footer">
@@ -232,9 +229,13 @@
 				</div>
 			</div>
 			<!-- // home_footer -->
+
 		</div>
+		<!-- // inner -->
 
 	</div>
+	<!-- // home_fam_layer -->
+
 </div>
 
 
@@ -263,56 +264,70 @@ $(document).ready(function(){
 	guideSlick();
 })
 
-/* 공지사항, 자주 묻는 질문 */
-let noticeWrap = document.querySelector(".notice_arcodian_wrap")
-if(noticeWrap) {
-	let listItems = document.querySelectorAll(".list .item");
-	listItems.forEach(function(item){
-		item.addEventListener("click", function(){
-			item.classList.toggle("active");
-		})
-	})
-}
-/* // 공지사항, 자주 묻는 질문 */
 
-const home_fam_layer = document.querySelector(".home_fam_layer");
-const home_fam_inner = home_fam_layer.querySelector(".inner");
-const keepClass = "home_fam_layer";
-const maxHeight = window.outerHeight * 0.9;
+/* 테스트 스크립트 */
+let home_fam_layer = document.querySelector(".home_fam_layer");
+let home_fam_inner = home_fam_layer.querySelector(".inner");
+let keepClass = "home_fam_layer";
+let maxHeight = window.outerHeight * 0.9;
+
+let layer_triger = document.querySelector(".layer_triger")
+let home_fam_list = document.querySelector(".home_fam_list");
+let home_fam_util = document.querySelector(".home_fam_util");
+let home_fam_bnr = document.querySelector(".home_fam_bnr");
+let home_fam_list_items = home_fam_list.querySelectorAll(".home_fam_sel");
+
+home_fam_list_items.forEach(function(item){
+	item.addEventListener("click", function(){
+		let home_fam_loc_list = document.querySelector(".home_fam_loc_list");
+		home_fam_loc_list.style.display = "block";
+		homeFamLayer("max");
+	})
+})
+
+function homeFamLayer(aa){
+	let addClass = aa;
+	home_fam_layer.removeAttribute("style");
+	home_fam_layer.className = keepClass;
+
+	let home_fam_loc_list = document.querySelector(".home_fam_loc_list");
+	let tempHeight;
+
+	if(addClass == "de" || addClass == "min") {
+		
+		if(addClass == "de") {
+			tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + home_fam_util.clientHeight + home_fam_bnr.clientHeight + "px";
+		} else {
+			tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + "px";
+		}
+		home_fam_layer.style.height = tempHeight;
+		home_fam_layer.classList.add(addClass);
+		home_fam_loc_list.style.display = "none";
+		home_fam_layer.style.overflowY = "hidden";
+	} else {
+		home_fam_loc_list.style.display = "block";
+
+		if(home_fam_inner.clientHeight <= maxHeight) {
+			home_fam_layer.style.height = home_fam_inner.clientHeight + layer_triger.clientHeight + "px";
+		} else {
+			home_fam_layer.style.height = "calc(100% - 76px)";
+		}
+		home_fam_layer.style.overflowY = "auto";
+	}
+	home_fam_layer.scrollTo(0, 0);
+}
+homeFamLayer("de");
 
 document.querySelector(".btn_de").addEventListener("click", function(){
-	home_fam_layer.removeAttribute("style");
-	home_fam_layer.className = keepClass;
-	home_fam_layer.classList.add("de");
-	console.log(home_fam_layer.clientHeight);
-	home_fam_layer.scrollTo(0, 0);
-	
+	homeFamLayer("de");
 })
 document.querySelector(".btn_min").addEventListener("click", function(){
-	home_fam_layer.removeAttribute("style");
-	home_fam_layer.className = keepClass;
-	home_fam_layer.classList.add("min");
-	console.log(home_fam_layer.clientHeight);
-	home_fam_layer.scrollTo(0, 0);
+	homeFamLayer("min");
 })
 document.querySelector(".btn_max").addEventListener("click", function(){
-	home_fam_layer.removeAttribute("style");
-	home_fam_layer.className = keepClass;
-	if(home_fam_inner.clientHeight < maxHeight) {
-		home_fam_layer.style.height = home_fam_inner.clientHeight + 22 + "px";
-	} else {
-		home_fam_layer.classList.add("max");
-	}
-	console.log(home_fam_layer.clientHeight);
+	homeFamLayer("max");
 })
-
-document.querySelector(".btn_del").addEventListener("click", function(){
-	document.querySelector(".home_fam_loc_list").style.display = "none";
-})
-
-document.querySelector(".btn_add").addEventListener("click", function(){
-	document.querySelector(".home_fam_loc_list").style.display = "block";
-})
+/* // 테스트 스크립트 */
 </script>
 
 </body>
