@@ -256,7 +256,7 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 
 
 /* 페이지 하단 고정 버튼 */
-.content_btm div.btm_btn {display:flex; justify-content:space-between; width:100%; padding:0 18px 24px;}
+.content_btm div.btm_btn {display:flex; flex-direction:column; justify-content:space-between; gap:4px; width:100%; padding:0 18px 24px;}
 .content_btm div.btm_btn div  {width:100%;}
 .content_btm div.btm_btn button {box-sizing:content-box; width:100%; height:48px; background-color:#333; border-radius:12px;}
 .content_btm div.btm_btn button span {color:#fff; font-size:16px; line-height:24px; font-weight:500;}
@@ -382,6 +382,13 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 /* // 회원 탈퇴 */
 
 
+/* 자녀 초대 링크 보내기 */
+.invite_child {display:flex; flex-direction:column; align-items: center; gap:40px; margin-top:80px; text-align:center;}
+.invite_child p.txt {color:#000; font-size:16px; line-height:24px; font-weight:400;}
+.invite_child div.img {display:inline-block; width:160px; height:160px;}
+/* // 자녀 초대 링크 보내기 */
+
+
 /* 레이어팝업(정리 필요) */
 .layer {text-align:center; font-family:'Noto Sans KR';}
 .layer div.dim {position:fixed; top:0; right:0; bottom:0; left:0; height:100vh; background-color:rgba(0,0,0,0.5); z-index:10;}
@@ -421,3 +428,24 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 .layer .btn_group div button.close {color:#000;}
 .layer .btn_group div button span {display:block; font-size:1em;}
 /* // 레이어팝업(정리 필요) */
+
+
+/* 레이어팝업 sos */
+.layer.sos .layer_inner {position:fixed; top:50%; left:50%; width:100%; padding:30px;  max-width:324px; margin:0; border-radius:24px; background-color:#FF0F6B; transform:translate(-50%,-50%) rotate(0deg);; transform-origin:50% 300%; z-index:11; text-align:center;}
+.layer.sos .layer_inner.active {animation: ani_sos 0.56s 1 linear;}
+.layer.sos .layer_inner span.icon {display:inline-block; position:relative; top:0; width:70px; height:70px;}
+.layer.sos .layer_inner div.tit {margin-top:12px; color:#fff; font-size:20px; line-height:29px; font-weight:bold;}
+.layer.sos .layer_inner p.txt {color:#fff; font-size:14px; line-height:20px;}
+.layer.sos .layer_inner div.img_profile {display:inline-block; position:relative; width:180px; height:180px; margin-top:24px; border-radius:100%; border:1px solid #E2E2E2; overflow:hidden; animation: ani_sos_ico 0.5s infinite; box-shadow:0 0 2px rgba(0,0,0,0.16); transform:scale(1); transform-origin:50% 50%;}
+.layer.sos .layer_inner div.img_profile {background:#fff url('../images/common/ico_profile_l.png') no-repeat center center / 92px 92px;}
+.layer.sos .layer_inner div.img_profile img {display:inline-block;}
+.layer.sos .layer_inner .btn_group {flex-direction:column; gap:12px; margin-top:24px; border:0;}
+.layer.sos .layer_inner .btn_group button {height:50px; background-color:#fff; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.16);}
+.layer.sos .layer_inner .btn_group button span {font-size:16px; line-height:24px; font-weight:500;}
+.layer.sos .layer_inner .btn_group button.cancel {background-color:#3B3B3B;}
+.layer.sos .layer_inner .btn_group button.cancel span {color:#fff;}
+.layer.sos .layer_inner .btn_group button.next {background-color:#fff;}
+.layer.sos .layer_inner .btn_group button.next span {color:#000;}
+@keyframes ani_sos {0% {margin-left:0; transform:translate(-50%,-50%) rotate(0deg);} 14% {margin-left:1px; transform:translate(-50%,-50%) rotate(-0.6deg);} 28% {margin-left:-1px; transform:translate(-50%,-50%) rotate(0.6deg);} 42% {margin-left:1px; transform:translate(-50%,-50%) rotate(-0.6deg);} 56% {margin-left:-1px; transform:translate(-50%,-50%) rotate(0.6deg);} 70% {margin-left:1px; transform:translate(-50%,-50%) rotate(-0.6deg);} 84% {margin-left:-1px; transform:translate(-50%,-50%) rotate(0.6deg);} 100% {margin-left:0;transform:translate(-50%,-50%) rotate(0deg);}}
+/* @keyframes ani_sos_ico {0% {top:0px;} 50% {top:1px;} 100% {top:0px;}} */
+/* // 레이어팝업 sos */
