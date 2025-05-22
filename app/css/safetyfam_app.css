@@ -388,6 +388,17 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 .invite_child div.img {display:inline-block; width:160px; height:160px;}
 /* // 자녀 초대 링크 보내기 */
 
+/* 초대코드 확인 */
+.invite_code_wrap {display:flex; flex-direction:column; align-items: center; gap:40px; width:100%; text-align:center;}
+.invite_code_wrap .invite_code {width:100%; padding:0 18px;}
+.invite_code_wrap p.txt {color:#000; font-size:16px; line-height:24px; font-weight:400;}
+.invite_code_wrap div.img {display:inline-block; width:160px; height:160px;}
+.invite_code_wrap .code_ipt {position:relative; height:48px; margin-top:36px; padding:12px 48px 12px 12px; background-color:#fff; border:1px solid #C9C9C9; border-radius:12px; color:#000; font-size:14px; line-height:24px; font-weight:500; box-shadow:0 1px 6px rgba(0,0,0,0.16);}
+.invite_code_wrap .code_ipt input {width:100%; height:24px; border:0; background-color:transparent;}
+.invite_code_wrap .code_ipt input::placeholder {color:#C9C9C9; font-size:inherit; line-height:inherit; font-weight:inherit;}
+.invite_code_wrap .code_ipt button.btn_del {position:absolute; top:50%; right:18px; transform:translateY(-50%); width:24px; height:24px;}
+/* // 초대코드 확인 */
+
 
 /* 레이어팝업(정리 필요) */
 .layer {text-align:center; font-family:'Noto Sans KR';}
@@ -405,8 +416,9 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 .layer.alert .layer_content div.tit span.care {color:var(--color-care);}
 .layer.alert .layer_content div.tit span.warring {color:var(--color-warring);} */
 .layer.alert .layer_content div.tit + p.txt {margin-top:10px;}
-.layer.alert .layer_content p.txt {color:#9F9F9F; font-size:14px; line-height:20px; word-break:keep-all;}
+.layer.alert .layer_content p.txt {margin-top:11px; color:#9F9F9F; font-size:14px; line-height:20px; word-break:keep-all;}
 .layer.alert .layer_content p.txt + p.small_txt {margin-top:12px; color:#999; font-size:16px; line-height:24px; word-break:keep-all;}
+.layer.alert .layer_content p.subtit {margin-top:23px; color:#000; font-size:16px; line-height:24px;}
 
 /* 얼랏 형 닫기 */
 .layer.alert .layer_inner div.close {position:absolute; top:15px; right:15px; width:20px; height:20px;}
@@ -425,7 +437,7 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 .layer .btn_group div button.prev,
 .layer .btn_group div button.back,
 .layer .btn_group div button.cancel,
-.layer .btn_group div button.close {color:#000;}
+.layer .btn_group div button.close {color:#9F9F9F;}
 .layer .btn_group div button span {display:block; font-size:1em;}
 /* // 레이어팝업(정리 필요) */
 
