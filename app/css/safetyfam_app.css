@@ -318,11 +318,11 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 /* home util */
 .home_fam_util {/* border-top:1px solid #EBEBEB; */ background-color:#fff;}
 .home_fam_util ul {display:flex; justify-content:center; gap:9px; padding:12px 0;}
-.home_fam_util ul li {display:inline-block; position:relative; width:100px; height:80px; padding:10px 0 9px; text-align:center;}
+.home_fam_util ul li {display:inline-block; position:relative; width:100%; height:80px; padding:10px 0 9px; text-align:center;}
 .home_fam_util ul li ~ li::before {content:""; display:block; position:absolute; top:50%; left:-5px; width:1px; height:60px; background-color:#EFEFEF; transform:translateY(-50%);}
 .home_fam_util ul li span.ico {display:inline-block;}
 .home_fam_util ul li span.ico img {display:inline-block; width:40px; height:40px; background-color:#EFEFEF; border-radius:100%;}
-.home_fam_util ul li p.txt {color:#000; font-size:12px; line-height:18px; font-weight:500;}
+.home_fam_util ul li p.txt {margin-top:3px; color:#000; font-size:12px; line-height:18px; font-weight:500;}
 /* // home util */
 
 /* home 배너 */
