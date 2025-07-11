@@ -364,7 +364,7 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 
 
 /* home_child_util 자녀용 */
-.home_child_util {display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 18px 24px;}
+.home_child_util {display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 18px 24px; background-color:#fff;}
 .home_child_util button {display:flex; flex-direction:column; justify-content:center; align-items:center; gap:8px; height:100px; border-radius:12px;}
 .home_child_util button span.ico {display:inline-block; width:40px; height:40px;}
 .home_child_util button span.txt {display:block; color:#fff; font-size:14px; line-height:20px; font-weight:500;}
