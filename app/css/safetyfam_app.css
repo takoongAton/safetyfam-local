@@ -305,7 +305,7 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 /* home 가족 목록 */
 .home_fam_loc_list {padding:16px 18px; border-bottom:1px solid #EBEBEB; background-color:#fff;}
 .home_fam_loc_list .list {display:flex; flex-direction:column; gap:12px 0;}
-.home_fam_loc_list li.item {display:flex; align-items:center; gap:12px;}
+.home_fam_loc_list li.item {display:flex; gap:12px;}
 .home_fam_loc_list li.item div.thum {min-width:60px;}
 .home_fam_loc_list li.item div.thum span.img {display:block; position:relative; width:60px; height:60px; border-radius:100%; overflow:hidden;}
 .home_fam_loc_list li.item div.txt_wrap {flex:1; text-align:left; padding-right:36px; background:url('../images/common/ico_arrow_right.png') no-repeat right center / 24px 24px;}
@@ -317,12 +317,12 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 
 /* home util */
 .home_fam_util {/* border-top:1px solid #EBEBEB; */ background-color:#fff;}
-.home_fam_util ul {display:flex; justify-content:center; gap:9px; padding:12px 0;}
-.home_fam_util ul li {display:inline-block; position:relative; width:100%; height:80px; padding:10px 0 9px; text-align:center;}
-.home_fam_util ul li ~ li::before {content:""; display:block; position:absolute; top:50%; left:-5px; width:1px; height:60px; background-color:#EFEFEF; transform:translateY(-50%);}
+.home_fam_util ul {display:flex; justify-content:center; gap:12px; padding:12px 18px;}
+.home_fam_util ul li {display:inline-block; position:relative; width:100%; height:80px; padding:10px 0 9px; border-radius:12px; box-shadow:0 1px 6px rgba(0, 0, 0, 0.16); text-align:center;}
+/* .home_fam_util ul li ~ li::before {content:""; display:block; position:absolute; top:50%; left:-5px; width:1px; height:60px; background-color:#EFEFEF; transform:translateY(-50%);} */
 .home_fam_util ul li span.ico {display:inline-block;}
 .home_fam_util ul li span.ico img {display:inline-block; width:40px; height:40px; background-color:#EFEFEF; border-radius:100%;}
-.home_fam_util ul li p.txt {margin-top:3px; color:#000; font-size:12px; line-height:18px; font-weight:500;}
+.home_fam_util ul li p.txt {margin-top:3px; color:#121212; font-size:14px; line-height:20px; font-weight:500;}
 /* // home util */
 
 /* home 배너 */
