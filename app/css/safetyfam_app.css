@@ -100,6 +100,7 @@ body {background-color:#F5F5F5;}
 /* .guide_wrap_slick .guide_item .img img {display:inline-block; width:256px; height:256px; border-radius:12px; line-height:1; overflow:hidden; vertical-align:top;} */
 .guide_wrap_slick .guide_item .txt_wrap {margin-top:40px; font-size:16px; line-height:24px;}
 .guide_wrap_slick .guide_item .txt_wrap p {margin-top:4px; color:#9F9F9F; font-size:14px; line-height:20px;}
+.guide_wrap_slick .guide_item .txt_wrap p.small {margin-top:12px; font-size:10px; line-height:1.4em; letter-spacing:0;}
 .guide_wrap_slick * {vertical-align:top;}
 
 /* more slick dot */
