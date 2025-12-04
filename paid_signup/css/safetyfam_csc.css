@@ -244,7 +244,7 @@ header a span::after {content:""; display:block; position:absolute; right:0; top
 
 /* 인증번호 요청 */
 .certify_wrap {} /* .verification_wrap {} */
-.certify_wrap button {width:120px; height:56px; background-color:#222; border-radius:5px;}
+.certify_wrap button {width:80px; height:56px; background-color:#222; border-radius:5px;}
 .certify_wrap button span {display:inline-block; color:#fff; font-size:16px; line-height:1.5em; font-weight:700;}
 .certify_wrap button[disabled="disabled"] {background-color:#ccc;}
 @media screen and (min-width:720px ) {
