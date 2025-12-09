@@ -30,12 +30,13 @@ body {
 /* 전체 틀 */
 .safetyfam_wrap {min-width:280px; max-width:908px; margin:0 auto; background-color:#fff;}
 /* .signUp_section {} */
-.signUp_aside {}
+.signUp_aside {padding:20px 16px 0;}
 .signUp_aside picture {display:block; max-width:708px; margin:0 auto; font-size:0;}
 .signUp_aside img {width:100%; height:auto;}
 
 .signUp_cont {}
 @media screen and (min-width:720px) {
+	.signUp_aside {padding:20px 11% 0;}
 	.signUp_cont {flex:1}
 }
 
