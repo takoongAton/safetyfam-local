@@ -296,15 +296,15 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 .home_fam_layer .layer_triger button.btn_triger {width:50px; height:6px; background-color:#EFEFEF; border-radius:3px; font-size:0; line-height:0;}
 
 /* home 가족 목록 선택 영역 */
-.home_fam_list {padding:16px 18px; border-bottom:1px solid #EBEBEB; background-color:#fff; text-align:left;}
+/* .home_fam_list {padding:16px 18px; border-bottom:1px solid #EBEBEB; background-color:#fff; text-align:left;}
 .home_fam_list ul {display:flex; gap:16px;}
 .home_fam_list div.home_fam_sel span.img {display:block; position:relative; width:60px; height:60px; border-radius:100%; background-color:#ddd; overflow:hidden;}
 .home_fam_list div.home_fam_sel span.txt {display:block; width:60px; margin-top:4px; padding-top:1px; color:#9F9F9F; font-size:12px; line-height:18px; font-weight:500; text-align:center; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical;}
-.home_fam_list div.home_fam_sel.active span.img::before {content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; border:4px solid #FFD446; border-radius:100%;}
+.home_fam_list div.home_fam_sel.active span.img::before {content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; border:4px solid #FFD446; border-radius:100%;} */
 /* // home 가족 목록 선택 영역 */
 
 /* home 가족 목록 */
-.home_fam_loc_list {padding:16px 18px; border-bottom:1px solid #EBEBEB; background-color:#fff;}
+/* .home_fam_loc_list {padding:16px 18px; border-bottom:1px solid #EBEBEB; background-color:#fff;}
 .home_fam_loc_list .list {display:flex; flex-direction:column; gap:12px 0;}
 .home_fam_loc_list li.item {display:flex; gap:12px;}
 .home_fam_loc_list li.item div.thum {min-width:60px;}
@@ -312,7 +312,7 @@ div.chat_guard_wrap .list_count {padding:0 18px 12px; color:#9F9F9F; font-size:1
 .home_fam_loc_list li.item div.txt_wrap {flex:1; text-align:left; padding-right:36px; background:url('../images/common/ico_arrow_right.png') no-repeat right center / 24px 24px;}
 .home_fam_loc_list li.item div.txt_wrap strong.name {display:block; font-size:16px; line-height:24px; font-weight:500;}
 .home_fam_loc_list li.item div.txt_wrap p.location {color:#9F9F9F; font-size:12px; line-height:18px; font-weight:400;}
-.home_fam_loc_list li.item div.txt_wrap p.location strong {color:#27AAFF; font-weight:bold;}
+.home_fam_loc_list li.item div.txt_wrap p.location strong {color:#27AAFF; font-weight:bold;} */
 
 /* // home 가족 목록 */
 
