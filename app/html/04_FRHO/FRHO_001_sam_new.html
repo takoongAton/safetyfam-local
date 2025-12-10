@@ -14,6 +14,28 @@
 	<link rel="stylesheet" href="../../css/safetyfam_app.css" />
 	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
 	<link rel="stylesheet" href="../../css/slick.css" />
+
+
+<style>
+
+
+
+
+
+
+/* home_fam_card ( home_fam_util -> home_fam_card) */
+.home_fam_card {padding:3px 12px 21px 12px; background-color:#fff;}
+.home_fam_card .card_list {display:inline-flex;}
+.home_fam_card .card_list .item {padding:5px 6px 7px;}
+.home_fam_card .card_list .item .inner {width:150px; height:130px; padding:12px; border-radius:12px; background-color:#f7f7f7; box-shadow:0 1px 6px rgba(0,0,0,0.16); text-align:left;}
+.home_fam_card .card_list .item .inner.sos {background-color:#FFEDED;}
+.home_fam_card .card_list .item .inner.time {background-color:#D5EFFF;}
+.home_fam_card .card_list .item .inner.report {background-color:#FFF2D6;}
+.home_fam_card .card_list .item .inner span.ico {display:inline-block; width:40px; height:40px; border-radius:100%; background-color:#fff; overflow:hidden;}
+.home_fam_card .card_list .item .inner strong.txt {display:block; color:#121212; font-size:16px; line-height:24px; font-weight:500; text-align:right;}
+.home_fam_card .card_list .item .inner p.txt {display:block; color:#9F9F9F; font-size:14px; line-height:20px; font-weight:400; text-align:right; white-space:normal;}
+/* // home_fam_card */
+</style>
 </head>
 <body>
 
@@ -85,6 +107,8 @@
 /* .home_fam_layer.min {overflow-y:hidden;} */
 /* .home_fam_layer.max {height:90vh;} */
 </style>
+
+
 <style>
 /* home 가족 목록 선택 영역 */
 .home_fam_list {padding:16px 18px; background-color:#fff; text-align:left;}
@@ -96,71 +120,67 @@
 .home_fam_list div.home_fam_sel span.txt {display:block; padding-top:1px; color:#000; font-size:16px; line-height:1.5em; font-weight:500; text-align:center; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical;}
 /* .home_fam_list div.home_fam_sel.active span.img::before {content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; border:4px solid #FFD446; border-radius:100%;} */
 
+
+/* home 가족 목록 */
+.home_fam_loc_list {padding:8px 18px 16px 18px; background-color:#fff;}
+.home_fam_loc_list .list {display:flex; flex-direction:column; gap:12px 0; overflow-x:hidden;}
+.home_fam_loc_list li.item {display:flex; flex-direction:column; gap:20px; padding:20px 12px; border:1px solid #DEDEDE; border-radius:12px; background-color:#F5F5F5;}
+.home_fam_loc_list li.item div.user_box {display:flex; gap:12px; width:100%;}
+.home_fam_loc_list li.item div.user_thum {min-width:76px; max-width:76px;}
+.home_fam_loc_list li.item div.user_thum span.img {display:block; position:relative; width:76px; min-width:76px; height:76px; border-radius:30px; overflow:hidden;}
+.home_fam_loc_list li.item div.user_state_wrap {display:flex; flex-direction:column; gap:7px; width:100%; overflow:hidden;}
+
+/* device_state */
+div.device_state {display:flex; align-items:center; gap:4px; overflow-x:auto; overflow-y:hidden;}
+div.device_state .state_item {display:flex; align-items:center; gap:2px; width:auto; max-width:88px; height:20px; padding:0 8px 0 6px; border-radius:10px; background-color:#fff;}
+div.device_state .state_item span.ico {display:inline-block; width:16px; height:16px;}
+div.device_state .state_item span.ico img {display:inline-block; width:16px; min-width:16px; height:16px;}
+div.device_state .state_item span.txt {max-width:88px; color:#000; font-size:9px; line-height:13px; font-weight:500; white-space:nowrap; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+/* // device_state */
+
+/* user_state */
+div.user_state {flex:1; text-align:left;}
+div.user_state div.user_info {display:flex; align-items:center; gap:8px;}
+div.user_state div.user_info strong.name {display:block; font-size:20px; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+div.user_state div.user_info span.ico {display:inline-block; width:66px; min-width:66px; height:20px;}
+div.user_state div.user_info span.ico img {display:inline-block; line-height:1;}
+
+div.user_state p.location {color:#9F9F9F; font-size:14px; line-height:20px; font-weight:400;}
+div.user_state p.location strong {color:#27AAFF; font-weight:bold;}
+/* // user_state */
+
+/* metric_wrap */
+div.metric_wrap {display: grid; grid-template-areas:"screen_time message_count" "chat_report chat_report"; gap:8px;}
+div.metric_wrap div.metric_item {display:flex; justify-content:space-between; align-items:center; gap:8px; height:60px; width:100%; padding:0 12px; border-radius:12px; background-color:#fff; box-shadow:0 1px 6px rgba(0,0,0,0.16);}
+div.metric_wrap div.metric_item span.ico {max-width:36px; max-height:36px; height:36px;}
+div.metric_wrap div.metric_item div.thum span.img {display:inline-block; width:36px; height:36px; border-radius:100%; background-color:#f5f5f5; overflow:hidden;}
+div.metric_wrap div.metric_item div.thum span.img img {display:block; width:100%; height:100%;}
+div.metric_wrap div.screen_time {grid-area:screen_time;}
+div.metric_wrap div.message_count {grid-area:message_count;}
+div.metric_wrap div.chat_report {grid-area:chat_report;}
+/* // metric_wrap */
+
+/* report_txt_wrap */
+div.report_txt_wrap {flex:1;}
+div.report_txt_wrap div.phone_tit {text-align:left;}
+div.report_txt_wrap div.phone_tit span.tit {display:block; color:#9F9F9F; font-size:11px; line-height:16px; font-weight:500;}
+div.report_txt_wrap .count_txt_wrap {display:flex; align-items:baseline; gap:2px;}
+div.report_txt_wrap .count_txt_wrap strong.count {display:inline-block; color:#121212; font-size:18px; line-height:26px; font-weight:700;}
+div.report_txt_wrap .count_txt_wrap span.txt {display:inline-block; padding-bottom:2px; color:#121212; font-size:10px; line-height: 15px; font-weight:400;}
+/* // report_txt_wrap */
+
+/* 대화 점수 */
+div.report_score_wrap {display:flex; flex-direction:column; justify-content:space-between; width:50%; height:40px; text-align:right;}
+div.report_score_wrap span.tag {display:inline-block; line-height:1;}
+div.report_score_wrap span.tag img {display:inline-block; width:34px; height:20px; line-height:1;}
+div.report_score_wrap div.scroe_gauge {width:100%; height:10px; background-color:#F5F5F5; border-radius:10px; overflow:hidden;}
+div.report_score_wrap div.scroe_gauge span {display:block; height:10px; background-color:#FF0F6B; border-radius:10px;}
+div.report_score_wrap div.scroe_gauge span.danger {width:19%; background-color:#FF0F6B;}
+div.report_score_wrap div.scroe_gauge span.warning {width:36.98630%; background-color:#FF8B03;}
+div.report_score_wrap div.scroe_gauge span.normal {width:74%; background-color:#08CC90;}
+div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26ABFF;}
+/* // 대화 점수 */
 </style>
-
-
-<style>
-	/* home 가족 목록 */
-	.home_fam_loc_list {padding:16px 18px; background-color:#fff;}
-	.home_fam_loc_list .list {display:flex; flex-direction:column; gap:12px 0; overflow-x:hidden;}
-	.home_fam_loc_list li.item {display:flex; flex-direction:column; gap:20px; padding:20px 12px; border:1px solid #DEDEDE; border-radius:12px; background-color:#F5F5F5;}
-	.home_fam_loc_list li.item div.user_info_wrap {display:flex; gap:12px; width:100%;}
-	.home_fam_loc_list li.item div.user_thum {min-width:76px; max-width:76px;}
-	.home_fam_loc_list li.item div.user_thum span.img {display:block; position:relative; width:76px; height:76px; border-radius:30px; overflow:hidden;}
-	
-	.home_fam_loc_list li.item div.state_info {display:flex; flex-direction:column; gap:7px; width:100%; overflow:hidden;}
-	.home_fam_loc_list li.item div.state_info ul.info {display:flex; align-items:center; gap:4px; overflow-x:auto; overflow-y:hidden;}
-	.home_fam_loc_list li.item div.state_info ul.info li {display:flex; align-items:center; gap:2px; width:auto; max-width:88px; height:20px; padding:0 8px 0 6px; border-radius:10px; background-color:#fff;}
-	.home_fam_loc_list li.item div.state_info ul.info li span.ico {display:inline-block; width:16px; height:16px;}
-	.home_fam_loc_list li.item div.state_info ul.info li span.ico img {display:inline-block; width:16px; height:16px;}
-	.home_fam_loc_list li.item div.state_info ul.info li span.txt {max-width:88px; color:#000; font-size:9px; line-height:13px; font-weight:500; white-space:nowrap; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-	}
-	
-	.home_fam_loc_list li.item div.state_info div.state {flex:1; text-align:left; padding-right:36px; /* background:url('../images/common/ico_arrow_right.png') no-repeat right center / 24px 24px; */}
-	.home_fam_loc_list li.item div.state_info div.state div.user_info {display:flex; align-items:center; gap:8px; padding:3px 0 4px;}
-	.home_fam_loc_list li.item div.state_info div.state div.user_info strong.name {display:inline-block; font-size:20px; font-weight:500;}
-	
-	.home_fam_loc_list li.item div.state_info div.state div.user_info div.siren {display:flex; align-items:center; gap:2px; height:22px; padding:0 8px 0 6px; border-radius:11px; background-color:#FF0F6B;}
-	.home_fam_loc_list li.item div.state_info div.state div.user_info div.siren span.ico {display:inline-block; width:16px; height:16px;}
-	.home_fam_loc_list li.item div.state_info div.state div.user_info div.siren span.ico img {display:inline-block; width:16px; height:16px;}
-	.home_fam_loc_list li.item div.state_info div.state div.user_info div.siren span.txt {display:inline-block; color:#fff; font-size:9px; line-height:13px; font-weight:500;}
-	
-	.home_fam_loc_list li.item div.state_info div.state p.location {color:#9F9F9F; font-size:14px; line-height:20px; font-weight:400;}
-	.home_fam_loc_list li.item div.state_info div.state p.location strong {color:#27AAFF; font-weight:bold;}
-	
-	
-	
-	/* .phone_test {display: grid; grid-template-areas:"screen_time screen_time message_count message_count" "chat_sum chat_sum chat_sum chat_sum"; gap:8px;} */
-	.phone_test {display: grid; grid-template-areas:"screen_time message_count" "chat_sum chat_sum"; gap:8px;}
-	.phone_test > div {display:flex; justify-content:space-between; align-items:center; gap:8px; height:60px; width:100%; padding:0 12px; border-radius:12px; background-color:#fff; box-shadow:0 1px 6px rgba(0,0,0,0.16);}
-	
-	.phone_test > div div.thum {max-width:36px; max-height:36px;}
-	.phone_test > div div.thum + div {flex:1;}
-	.phone_test > div div.thum span.img {display:inline-block; width:36px !important; height:36px !important; border-radius:100%; background-color:#f5f5f5; overflow:hidden;}
-	.phone_test > div div.thum span.img img {display:block; width:100%; height:100%;}
-	.phone_test > div.screen_time {grid-area:screen_time;}
-	.phone_test > div.message_count {grid-area:message_count;}
-	.phone_test > div.chat_sum {grid-area:chat_sum;}
-	
-	div.phone_tit {text-align:left;}
-	div.phone_tit span.tit {display:block; color:#9F9F9F; font-size:11px; line-height:16px; font-weight:500;}
-	
-	.count_txt_wrap {display:flex; align-items:baseline; gap:2px;}
-	.count_txt_wrap strong.count {display:inline-block; color:#121212; font-size:18px; line-height:26px; font-weight:700;}
-	.count_txt_wrap span.txt {display:inline-block; padding-bottom:2px; color:#121212; font-size:10px; line-height: 15px; font-weight:400;}
-	
-	
-	/* 대화 점수 */
-	.score_wrap {width:50%; text-align:right;}
-	.score_wrap .score_item_tit {}
-	.score_wrap .score_item_tit img {display:inline-block; width:34px; height:20px; line-height:1;}
-	.scroe_gauge {width:100%; height:10px; background-color:#F5F5F5; border-radius:10px; overflow:hidden;}
-	.scroe_gauge span {display:block; height:10px; background-color:#FF0F6B; border-radius:10px;}
-	.scroe_gauge span.danger {width:77.39726%; background-color:#FF0F6B;}
-	.scroe_gauge span.normal {width:36.98630%; background-color:#08CC90;}
-	.score_item {display:flex; flex-direction:column; justify-content:space-between; width:100%; height:40px;}
-	/* // 대화 점수 */
-	</style>
 
 <div class="layer bottom">
 
@@ -175,6 +195,14 @@
 							<div class="home_fam_sel all active">
 								<span class="img"><img src="../../images/temp/img_all_fam.png" alt="이미지"></span>
 								<span class="txt">전체</span>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div>
+							<div class="home_fam_sel">
+								<span class="img"><img src="../../images/home/ico_tab_profile_default.png" alt="이미지"></span>
+								<span class="txt">이름</span>
 							</div>
 						</div>
 					</li>
@@ -205,7 +233,7 @@
 					<li class="item">
 						<div>
 							<div class="home_fam_sel">
-								<span class="img"><img src="../../images/temp/img_add_fam.png" alt="이미지"></span>
+								<span class="img"><img src="../../images/home/img_add_fam.png" alt="이미지"></span>
 								<span class="txt">추가</span>
 							</div>
 						</div>
@@ -218,48 +246,57 @@
 			<div class="home_fam_loc_list" style="display:none;">
 				<ul class="list">
 					<li class="item">
-						<div class="user_info_wrap">
+						<div class="user_box">
 							<div class="user_thum">
-								<span class="img"><img src="../../images/temp/temp_profile.jpg" alt="이미지"></span>
+								<span class="img"><img src="../../images/temp/profile_winter.jpg" alt="이미지"></span>
 							</div>
-							<div class="state_info">
-								<ul class="info">
-									<li>
-										<span class="ico"><img src="../../images/home/ico_battery_99.png" alt="배터리 99% 아이콘"></span>
-										<span class="txt">63%</span>
-									</li>
-									<li>
+							<div class="user_state_wrap">
+								<div class="device_state">
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_battery_0.png" alt="배터리 0% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_50.png" alt="배터리 1~50% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_99.png" alt="배터리 51~99% 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_battery_100.png" alt="배터리 100% 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_battery_charge.png" alt="배터리 충전중 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_unable.png" alt="배터리 확인불가 아이콘"></span> -->
+										<span class="txt">100%</span>
+									</div>
+									<div class="state_item">
 										<span class="ico"><img src="../../images/home/ico_sound_vibration.png" alt="진동 모드 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_sound_on.png" alt="소리 모드 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_sound_off.png" alt="무음 모드 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_sound_unable.png" alt="확인 불가 아이콘"></span> -->
 										<span class="txt">진동 모드</span>
-									</li>
-									<li>
-										<span class="ico"><img src="../../images/home/ico_net_wifi.png" alt="WIFI 아이콘"></span>
-										<span class="txt">ATON_GUEST12312312345</span>
-									</li>
-								</ul>
-								<div class="state">
+									</div>
+									<div class="state_item">
+										<span class="ico"><img src="../../images/home/ico_net_wifi.png" alt="와이파이 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_net_data.png" alt="데이터 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_net_unable.png" alt="확인 불가 아이콘"></span> -->
+										<span class="txt">ATON_GUEST</span>
+									</div>
+								</div>
+								<!-- // device_state -->
+
+								<div class="user_state">
 									<div class="user_info">
-										<strong class="name">나나</strong>
-										<div class="siren">
-											<span class="ico"><img src="../../images/home/ico_home_sos2.png" alt="긴급 호출 아이콘"></span>
-											<span class="txt">긴급 호출</span>
-										</div>
+										<strong class="name">윈터나나윈터나나윈터나나</strong>
+										<span class="ico"><img src="../../images/home/ico_home_sos.png" alt="긴급 호출 아이콘"></span>
 									</div>
 									<p class="location">서울시 영등포구 여의도동</p>
 								</div>
-								<!-- // state -->
+								<!-- // user_state -->
 							</div>
-							<!-- // state_info -->
+							<!-- // user_state_wrap -->
 						</div>
-						<!-- // user_info_wrap -->
+						<!-- // user_box -->
 
-						<div class="phone_test">
-							<div class="screen_time">
-								<div class="thum"><span class="img"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span></div>
-								<div>
+						<div class="metric_wrap">
+							<div class="metric_item screen_time">
+								<span class="ico"><img src="../../images/home/ico_home_time.png" alt="이미지"></span>
+								<!-- <span class="ico"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span> -->
+								<div class="report_txt_wrap">
 									<div class="phone_tit">
 										<span class="tit">오늘 사용시간</span>
-										<!-- <span class="ico"><img src="../../images/home/ico_score_normal.png" alt="대화점수 아이콘"></span> -->
 									</div>
 									<div class="count_txt_wrap">
 										<strong class="count">16</strong>
@@ -269,12 +306,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="message_count">
-								<div class="thum"><span class="img"><img src="../../images/home/ico_home_message_new.png" alt="이미지"></span></div>
-								<div>
+							<div class="metric_item message_count">
+								<span class="ico"><img src="../../images/home/ico_home_message_new.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
 									<div class="phone_tit">
 										<span class="tit">유해 메시지</span>
-										<!-- <span class="ico"><img src="../../images/home/ico_score_normal.png" alt="대화점수 아이콘"></span> -->
 									</div>
 									<div class="count_txt_wrap">
 										<strong class="count">999+</strong>
@@ -282,12 +318,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="chat_sum">
-								<div class="thum"><span class="img"><img src="../../images/home/ico_home_score.png" alt="이미지"></span></div>
-								<div>
+							<div class="metric_item chat_report">
+								<span class="ico"><img src="../../images/home/ico_home_score.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
 									<div class="phone_tit">
 										<span class="tit">대화 점수</span>
-										<!-- <span class="ico"><img src="../../images/home/ico_score_normal.png" alt="대화점수 아이콘"></span> -->
 									</div>
 									<div class="count_txt_wrap">
 										<strong class="count">37</strong>
@@ -295,64 +330,182 @@
 									</div>
 								</div>
 
-								<div class="score_wrap">
-									<div class="score_item">
-										<span class="score_item_tit"><img src="../../images/home/ico_score_normal.png" alt="보통 아이콘"></span>
-										<div class="scroe_gauge">
-											<span class="normal"></span>
-										</div>
-										<!-- // scroe_gauge -->
+								<div class="report_score_wrap">
+									<span class="tag"><img src="../../images/home/ico_score_danger.png" alt="위험"></span>
+									<!-- <span class="tag"><img src="../../images/home/ico_score_warning.png" alt="주의"></span>
+									<span class="tag"><img src="../../images/home/ico_score_normal.png" alt="보통"></span>
+									<span class="tag"><img src="../../images/home/ico_score_good.png" alt="양호"></span> -->
+									<div class="scroe_gauge">
+										<span class="danger"></span>
+										<!-- <span class="warning"></span>
+										<span class="normal"></span>
+										<span class="good"></span> -->
 									</div>
+									<!-- // scroe_gauge -->
 								</div>
-								<!-- // score_wrap -->
+								<!-- // report_score_wrap -->
 							</div>
 						</div>
-						<!-- // phone_test -->
+						<!-- // metric_wrap -->
 					</li>
 
+
 					<li class="item">
-						<div class="user_info_wrap">
+						<div class="user_box">
+							<div class="user_thum">
+								<span class="img"><img src="../../images/temp/profile_winter.jpg" alt="이미지"></span>
+							</div>
+							<div class="user_state_wrap">
+								<div class="device_state">
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_battery_0.png" alt="배터리 0% 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_battery_50.png" alt="배터리 1~50% 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_battery_99.png" alt="배터리 51~99% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_100.png" alt="배터리 100% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_charge.png" alt="배터리 충전중 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_unable.png" alt="배터리 확인불가 아이콘"></span> -->
+										<span class="txt">63%</span>
+									</div>
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_sound_vibration.png" alt="진동 모드 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_sound_on.png" alt="소리 모드 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_sound_off.png" alt="무음 모드 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_sound_unable.png" alt="확인 불가 아이콘"></span> -->
+										<span class="txt">소리 모드</span>
+									</div>
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_net_wifi.png" alt="와이파이 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_net_data.png" alt="데이터 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_net_unable.png" alt="확인 불가 아이콘"></span> -->
+										<span class="txt">모바일 데이터</span>
+									</div>
+								</div>
+								<!-- // device_state -->
+
+								<div class="user_state">
+									<div class="user_info">
+										<strong class="name">나나</strong>
+										<span class="ico"><img src="../../images/home/ico_home_sos.png" alt="긴급 호출 아이콘"></span>
+									</div>
+									<p class="location">서울시 영등포구 여의도동</p>
+								</div>
+								<!-- // user_state -->
+							</div>
+							<!-- // user_state_wrap -->
+						</div>
+						<!-- // user_box -->
+
+						<div class="metric_wrap">
+							<div class="metric_item screen_time">
+								<span class="ico"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
+									<div class="phone_tit">
+										<span class="tit">오늘 사용시간</span>
+									</div>
+									<div class="count_txt_wrap">
+										<strong class="count">16</strong>
+										<span class="txt">시간</span>
+										<strong class="count">15</strong>
+										<span class="txt">분</span>
+									</div>
+								</div>
+							</div>
+							<div class="metric_item message_count">
+								<span class="ico"><img src="../../images/home/ico_home_message_new.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
+									<div class="phone_tit">
+										<span class="tit">유해 메시지</span>
+									</div>
+									<div class="count_txt_wrap">
+										<strong class="count">999+</strong>
+										<span class="txt">건 감지</span>
+									</div>
+								</div>
+							</div>
+							<div class="metric_item chat_report">
+								<span class="ico"><img src="../../images/home/ico_home_score.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
+									<div class="phone_tit">
+										<span class="tit">대화 점수</span>
+									</div>
+									<div class="count_txt_wrap">
+										<strong class="count">37</strong>
+										<span class="txt">점</span>
+									</div>
+								</div>
+
+								<div class="report_score_wrap">
+									<!-- <span class="tag"><img src="../../images/home/ico_score_danger.png" alt="위험"></span> -->
+									<span class="tag"><img src="../../images/home/ico_score_warning.png" alt="주의"></span>
+									<!-- <span class="tag"><img src="../../images/home/ico_score_normal.png" alt="보통"></span>
+									<span class="tag"><img src="../../images/home/ico_score_good.png" alt="양호"></span> -->
+									<div class="scroe_gauge">
+										<!-- <span class="danger"></span> -->
+										<span class="warning"></span>
+										<!-- <span class="normal"></span>
+										<span class="good"></span> -->
+									</div>
+									<!-- // scroe_gauge -->
+								</div>
+								<!-- // report_score_wrap -->
+							</div>
+						</div>
+						<!-- // metric_wrap -->
+					</li>
+
+
+
+					<li class="item">
+						<div class="user_box">
 							<div class="user_thum">
 								<span class="img"><img src="../../images/temp/img_profile_02.png" alt="이미지"></span>
 							</div>
-							<div class="state_info">
-								<ul class="info">
-									<li>
-										<span class="ico"><img src="../../images/home/ico_battery_99.png" alt="배터리 99% 아이콘"></span>
-										<span class="txt">63%</span>
-									</li>
-									<li>
-										<span class="ico"><img src="../../images/home/ico_sound_vibration.png" alt="진동 모드 아이콘"></span>
-										<span class="txt">진동 모드</span>
-									</li>
-									<li>
-										<span class="ico"><img src="../../images/home/ico_net_wifi.png" alt="WIFI 아이콘"></span>
-										<span class="txt">ATON_GUEST12312312345</span>
-									</li>
-								</ul>
-								<div class="state">
+							<div class="user_state_wrap">
+								<div class="device_state">
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_battery_0.png" alt="배터리 0% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_50.png" alt="배터리 1~50% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_99.png" alt="배터리 51~99% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_100.png" alt="배터리 100% 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_battery_charge.png" alt="배터리 충전중 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_battery_unable.png" alt="배터리 확인불가 아이콘"></span> -->
+										<span class="txt">충전중</span>
+									</div>
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_sound_vibration.png" alt="진동 모드 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_sound_on.png" alt="소리 모드 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_sound_off.png" alt="무음 모드 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_sound_unable.png" alt="확인 불가 아이콘"></span> -->
+										<span class="txt">무음 모드</span>
+									</div>
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_net_wifi.png" alt="와이파이 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_net_data.png" alt="데이터 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_net_unable.png" alt="확인 불가 아이콘"></span>
+										<span class="txt">확인 불가</span>
+									</div>
+								</div>
+								<!-- // device_state -->
+
+								<div class="user_state">
 									<div class="user_info">
 										<strong class="name">나나</strong>
-										<div class="siren">
-											<span class="ico"><img src="../../images/home/ico_home_sos2.png" alt="긴급 호출 아이콘"></span>
-											<span class="txt">긴급 호출</span>
-										</div>
+										<span class="ico"><img src="../../images/home/ico_home_sos.png" alt="긴급 호출 아이콘"></span>
 									</div>
 									<p class="location">서울시 영등포구 여의도동</p>
 								</div>
-								<!-- // state -->
+								<!-- // user_state -->
 							</div>
-							<!-- // state_info -->
+							<!-- // user_state_wrap -->
 						</div>
-						<!-- // user_info_wrap -->
+						<!-- // user_box -->
 
-						<div class="phone_test">
-							<div class="screen_time">
-								<div class="thum"><span class="img"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span></div>
-								<div>
+						<div class="metric_wrap">
+							<div class="metric_item screen_time">
+								<span class="ico"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
 									<div class="phone_tit">
 										<span class="tit">오늘 사용시간</span>
-										<!-- <span class="ico"><img src="../../images/home/ico_score_normal.png" alt="대화점수 아이콘"></span> -->
 									</div>
 									<div class="count_txt_wrap">
 										<strong class="count">16</strong>
@@ -362,12 +515,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="message_count">
-								<div class="thum"><span class="img"><img src="../../images/home/ico_home_message_new.png" alt="이미지"></span></div>
-								<div>
+							<div class="metric_item message_count">
+								<span class="ico"><img src="../../images/home/ico_home_message_new.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
 									<div class="phone_tit">
 										<span class="tit">유해 메시지</span>
-										<!-- <span class="ico"><img src="../../images/home/ico_score_normal.png" alt="대화점수 아이콘"></span> -->
 									</div>
 									<div class="count_txt_wrap">
 										<strong class="count">999+</strong>
@@ -375,12 +527,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="chat_sum">
-								<div class="thum"><span class="img"><img src="../../images/home/ico_home_score.png" alt="이미지"></span></div>
-								<div>
+							<div class="metric_item chat_report">
+								<span class="ico"><img src="../../images/home/ico_home_score.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
 									<div class="phone_tit">
 										<span class="tit">대화 점수</span>
-										<!-- <span class="ico"><img src="../../images/home/ico_score_normal.png" alt="대화점수 아이콘"></span> -->
 									</div>
 									<div class="count_txt_wrap">
 										<strong class="count">37</strong>
@@ -388,64 +539,161 @@
 									</div>
 								</div>
 
-								<div class="score_wrap">
-									<div class="score_item">
-										<span class="score_item_tit"><img src="../../images/home/ico_score_danger.png" alt="위험 아이콘"></span>
-										<div class="scroe_gauge">
-											<span class="danger"></span>
-										</div>
-										<!-- // scroe_gauge -->
+								<div class="report_score_wrap">
+									<!-- <span class="tag"><img src="../../images/home/ico_score_danger.png" alt="위험"></span>
+									<span class="tag"><img src="../../images/home/ico_score_warning.png" alt="주의"></span> -->
+									<span class="tag"><img src="../../images/home/ico_score_normal.png" alt="보통"></span>
+									<!-- <span class="tag"><img src="../../images/home/ico_score_good.png" alt="양호"></span> -->
+									<div class="scroe_gauge">
+										<!-- <span class="danger"></span>
+										<span class="warning"></span> -->
+										<span class="normal"></span>
+										<!-- <span class="good"></span> -->
 									</div>
+									<!-- // scroe_gauge -->
 								</div>
-								<!-- // score_wrap -->
+								<!-- // report_score_wrap -->
 							</div>
 						</div>
-						<!-- // phone_test -->
+						<!-- // metric_wrap -->
+					</li>
+
+					<li class="item">
+						<div class="user_box">
+							<div class="user_thum">
+								<span class="img"><img src="../../images/temp/img_profile_02.png" alt="이미지"></span>
+							</div>
+							<div class="user_state_wrap">
+								<div class="device_state">
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_battery_0.png" alt="배터리 0% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_50.png" alt="배터리 1~50% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_99.png" alt="배터리 51~99% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_100.png" alt="배터리 100% 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_battery_charge.png" alt="배터리 충전중 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_battery_unable.png" alt="배터리 확인불가 아이콘"></span>
+										<span class="txt">확인불가</span>
+									</div>
+									<div class="state_item">
+										<!-- <span class="ico"><img src="../../images/home/ico_sound_vibration.png" alt="진동 모드 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_sound_on.png" alt="소리 모드 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_sound_off.png" alt="무음 모드 아이콘"></span> -->
+										<span class="ico"><img src="../../images/home/ico_sound_unable.png" alt="확인 불가 아이콘"></span>
+										<span class="txt">확인 불가</span>
+									</div>
+									<div class="state_item">
+										<span class="ico"><img src="../../images/home/ico_net_wifi.png" alt="와이파이 아이콘"></span>
+										<!-- <span class="ico"><img src="../../images/home/ico_net_data.png" alt="데이터 아이콘"></span>
+										<span class="ico"><img src="../../images/home/ico_net_unable.png" alt="확인 불가 아이콘"></span> -->
+										<span class="txt">ATON_GUEST12312312345</span>
+									</div>
+								</div>
+								<!-- // device_state -->
+
+								<div class="user_state">
+									<div class="user_info">
+										<strong class="name">나나</strong>
+										<span class="ico"><img src="../../images/home/ico_home_sos.png" alt="긴급 호출 아이콘"></span>
+									</div>
+									<p class="location">서울시 영등포구 여의도동</p>
+								</div>
+								<!-- // user_state -->
+							</div>
+							<!-- // user_state_wrap -->
+						</div>
+						<!-- // user_box -->
+
+						<div class="metric_wrap">
+							<div class="metric_item screen_time">
+								<span class="ico"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
+									<div class="phone_tit">
+										<span class="tit">오늘 사용시간</span>
+									</div>
+									<div class="count_txt_wrap">
+										<strong class="count">16</strong>
+										<span class="txt">시간</span>
+										<strong class="count">15</strong>
+										<span class="txt">분</span>
+									</div>
+								</div>
+							</div>
+							<div class="metric_item message_count">
+								<span class="ico"><img src="../../images/home/ico_home_message_new.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
+									<div class="phone_tit">
+										<span class="tit">유해 메시지</span>
+									</div>
+									<div class="count_txt_wrap">
+										<strong class="count">999+</strong>
+										<span class="txt">건 감지</span>
+									</div>
+								</div>
+							</div>
+							<div class="metric_item chat_report">
+								<span class="ico"><img src="../../images/home/ico_home_score.png" alt="이미지"></span>
+								<div class="report_txt_wrap">
+									<div class="phone_tit">
+										<span class="tit">대화 점수</span>
+									</div>
+									<div class="count_txt_wrap">
+										<strong class="count">37</strong>
+										<span class="txt">점</span>
+									</div>
+								</div>
+
+								<div class="report_score_wrap">
+									<!-- <span class="tag"><img src="../../images/home/ico_score_danger.png" alt="위험"></span>
+									<span class="tag"><img src="../../images/home/ico_score_warning.png" alt="주의"></span>
+									<span class="tag"><img src="../../images/home/ico_score_normal.png" alt="보통"></span> -->
+									<span class="tag"><img src="../../images/home/ico_score_good.png" alt="양호"></span>
+									<div class="scroe_gauge">
+										<!-- <span class="danger"></span>
+										<span class="warning"></span>
+										<span class="normal"></span> -->
+										<span class="good"></span>
+									</div>
+									<!-- // scroe_gauge -->
+								</div>
+								<!-- // report_score_wrap -->
+							</div>
+						</div>
+						<!-- // metric_wrap -->
 					</li>
 
 				</ul>
 				<!-- // list -->
 			</div>
 			<!-- // home_fam_loc_list -->
-<style>
-.home_fam_util_new { padding:0 12px; background-color:#fff;}
-.home_fam_util_new ul {display:flex; margin-bottom:24px;}
-.home_fam_util_new .item {display:flex; flex-direction:column; padding:5px 6px 7px;}
-.home_fam_util_new .item div {width:150px; height:130px; padding:12px; border-radius:12px; background-color:#FFEDED; box-shadow:0 1px 6px rgba(0,0,0,0.16); text-align:left;}
-.home_fam_util_new .item div span.ico {display:inline-block; width:40px; height:40px; border-radius:100%; background-color:#fff; overflow:hidden;}
-.home_fam_util_new .item strong.txt {display:block; color:#121212; font-size:16px; line-height:24px; font-weight:500; text-align:right;}
-.home_fam_util_new .item p.txt {display:block; color:#9F9F9F; font-size:14px; line-height:20px; font-weight:400; text-align:right; white-space:normal;}
-</style>
-			<div class="home_fam_util_new scroll-wrapper">
-				<ul class="scroll">
-					<li class="item">
-						<div>
-							<span class="ico"><img src="../../images/home/ico_card_sos_40.png" alt="긴급호출 아이콘"></span>
+
+
+			<div class="home_fam_card scroll-wrapper">
+				<div class="card_list scroll">
+					<div class="item">
+						<div class="inner sos">
+							<span class="ico"><img src="../../images/home/ico_card_sos.png" alt="긴급호출 아이콘"></span>
 							<strong class="txt">긴급 호출</strong>
-							<p class="txt">자녀에게 즉시 알림을
-								보내요</p>
+							<p class="txt">자녀에게 즉시 알림을 보내요</p>
 						</div>
-					</li>
-					<li class="item">
-						<div>
-							<span class="ico"><img src="../../images/home/ico_card_sos_40.png" alt="긴급호출 아이콘"></span>
-							<strong class="txt">긴급 호출</strong>
-							<p class="txt">자녀에게 즉시 알림을
-								보내요</p>
+					</div>
+					<div class="item">
+						<div class="inner time">
+							<span class="ico"><img src="../../images/home/ico_card_time.png" alt="앱 사용시간 아이콘"></span>
+							<strong class="txt">앱 사용시간</strong>
+							<p class="txt">앱 사용 습관을<br />한눈에 관리해요</p>
 						</div>
-					</li>
-					<li class="item">
-						<div>
-							<span class="ico"><img src="../../images/home/ico_card_sos_40.png" alt="긴급호출 아이콘"></span>
-							<strong class="txt">긴급 호출</strong>
-							<p class="txt">자녀에게 즉시 알림을
-								보내요</p>
+					</div>
+					<div class="item">
+						<div class="inner report">
+							<span class="ico"><img src="../../images/home/ico_card_report.png" alt="대화리포트 아이콘"></span>
+							<strong class="txt">대화 리포트</strong>
+							<p class="txt">대화내용을 통해<br />정서적 변화를 살펴요</p>
 						</div>
-					</li>
-				</ul>
-				
+					</div>
+				</div>
+				<!-- // card_list -->
 			</div>
-			<!-- // home_fam_util_new -->
+			<!-- // home_fam_card -->
 
 	
 			<div class="home_fam_bnr">
@@ -529,7 +777,7 @@ let maxHeight = window.outerHeight * 0.9;
 
 let layer_triger = document.querySelector(".layer_triger")
 let home_fam_list = document.querySelector(".home_fam_list");
-let home_fam_util = document.querySelector(".home_fam_util_new");
+let home_fam_card = document.querySelector(".home_fam_card");
 let home_fam_bnr = document.querySelector(".home_fam_bnr");
 let home_fam_list_items = home_fam_list.querySelectorAll(".home_fam_sel");
 
@@ -552,7 +800,7 @@ function homeFamLayer(aa){
 	if(addClass == "de" || addClass == "min") {
 		
 		if(addClass == "de") {
-			tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + home_fam_util.clientHeight + home_fam_bnr.clientHeight + "px";
+			tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + home_fam_card.clientHeight + home_fam_bnr.clientHeight + "px";
 		} else {
 			tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + "px";
 		}
@@ -584,6 +832,7 @@ document.querySelector(".btn_max").addEventListener("click", function(){
 	homeFamLayer("max");
 })
 /* // 테스트 스크립트 */
+homeFamLayer("max");
 </script>
 
 </body>
