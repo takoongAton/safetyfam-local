@@ -14,98 +14,6 @@
 	<link rel="stylesheet" href="../../css/safetyfam_app.css" />
 	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
 	<link rel="stylesheet" href="../../css/slick.css" />
-
-
-<style>
-/* home 가족 목록 선택 영역 */
-.home_fam_list {padding:16px 18px; background-color:#fff; text-align:left;}
-.home_fam_list ul {display:flex; gap:4px;}
-.home_fam_list div.home_fam_sel {display:flex; align-items:center; gap:6px; position:relative; padding:4px 12px 4px 4px; background-color:#F5F5F5; border-radius:100px;}
-.home_fam_list div.home_fam_sel.active {background-color:#fff}
-.home_fam_list div.home_fam_sel.active::before {content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; border:2px solid #26ABFF; border-radius:100px;}
-.home_fam_list div.home_fam_sel span.img {display:block; position:relative; width:32px; height:32px; border-radius:100%; background-color:#ddd; overflow:hidden;}
-.home_fam_list div.home_fam_sel span.txt {display:block; padding-top:1px; color:#000; font-size:16px; line-height:1.5em; font-weight:500; text-align:center; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical;}
-/* // home 가족 목록 선택 영역 */
-
-/* home 가족 목록 */
-.home_fam_loc_list {padding:8px 18px 16px 18px; background-color:#fff;}
-.home_fam_loc_list .list {display:flex; flex-direction:column; gap:12px 0; overflow-x:hidden;}
-
-
-.home_fam_loc_list div.item {display:flex; flex-direction:column; gap:20px; padding:20px 12px; border:1px solid #DEDEDE; border-radius:12px; background-color:#F5F5F5;}
-.home_fam_loc_list div.item div.user_box {display:flex; gap:12px; width:100%;}
-.home_fam_loc_list div.item div.user_thum {min-width:76px; max-width:76px;}
-.home_fam_loc_list div.item div.user_thum span.img {display:block; position:relative; width:76px; min-width:76px; height:76px; border-radius:30px; overflow:hidden;}
-.home_fam_loc_list div.item div.user_state_wrap {display:flex; flex-direction:column; gap:7px; width:100%; overflow:hidden;}
-/* // home 가족 목록 */
-
-/* device_state */
-div.device_state {display:flex; align-items:center; gap:4px; overflow-x:auto; overflow-y:hidden;}
-div.device_state::-webkit-scrollbar {display:none !important;}
-div.device_state .state_item {display:flex; align-items:center; gap:2px; width:auto; max-width:88px; height:20px; padding:0 8px 0 6px; border-radius:10px; background-color:#fff;}
-div.device_state .state_item span.ico {display:inline-block; width:16px; height:16px;}
-div.device_state .state_item span.ico img {display:inline-block; width:16px; min-width:16px; height:16px;}
-div.device_state .state_item span.txt {max-width:88px; color:#000; font-size:9px; line-height:13px; font-weight:500; white-space:nowrap; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-/* // device_state */
-
-/* user_state */
-div.user_state {flex:1; text-align:left;}
-div.user_state div.user_info {display:flex; align-items:center; gap:8px;}
-div.user_state div.user_info strong.name {display:block; font-size:20px; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-div.user_state div.user_info span.ico {display:inline-block; width:66px; min-width:66px; height:20px;}
-div.user_state div.user_info span.ico img {display:inline-block; line-height:1;}
-
-div.user_state p.location {color:#9F9F9F; font-size:14px; line-height:20px; font-weight:400;}
-div.user_state p.location strong {color:#27AAFF; font-weight:bold;}
-/* // user_state */
-
-/* metric_wrap */
-div.metric_wrap {display: grid; grid-template-areas:"screen_time message_count" "chat_report chat_report"; gap:8px;}
-div.metric_wrap div.metric_item {display:flex; justify-content:space-between; align-items:center; gap:8px; height:60px; width:100%; padding:0 12px; border-radius:12px; background-color:#fff; box-shadow:0 1px 6px rgba(0,0,0,0.16);}
-div.metric_wrap div.metric_item span.ico {max-width:36px; max-height:36px; height:36px;}
-div.metric_wrap div.metric_item div.thum span.img {display:inline-block; width:36px; height:36px; border-radius:100%; background-color:#f5f5f5; overflow:hidden;}
-div.metric_wrap div.metric_item div.thum span.img img {display:block; width:100%; height:100%;}
-div.metric_wrap div.screen_time {grid-area:screen_time;}
-div.metric_wrap div.message_count {grid-area:message_count;}
-div.metric_wrap div.chat_report {grid-area:chat_report;}
-/* // metric_wrap */
-
-/* report_txt_wrap */
-div.report_txt_wrap {flex:1;}
-div.report_txt_wrap div.phone_tit {text-align:left;}
-div.report_txt_wrap div.phone_tit span.tit {display:block; color:#9F9F9F; font-size:11px; line-height:16px; font-weight:500;}
-div.report_txt_wrap .count_txt_wrap {display:flex; align-items:baseline; gap:2px;}
-div.report_txt_wrap .count_txt_wrap strong.count {display:inline-block; color:#121212; font-size:18px; line-height:26px; font-weight:700;}
-div.report_txt_wrap .count_txt_wrap span.txt {display:inline-block; padding-bottom:2px; color:#121212; font-size:10px; line-height: 15px; font-weight:400;}
-/* // report_txt_wrap */
-
-/* 대화 점수 */
-div.report_score_wrap {display:flex; flex-direction:column; justify-content:space-between; width:50%; height:40px; text-align:right;}
-div.report_score_wrap span.tag {display:inline-block; line-height:1;}
-div.report_score_wrap span.tag img {display:inline-block; width:34px; height:20px; line-height:1;}
-div.report_score_wrap div.scroe_gauge {width:100%; height:10px; background-color:#F5F5F5; border-radius:10px; overflow:hidden;}
-div.report_score_wrap div.scroe_gauge span {display:block; height:10px; background-color:#FF0F6B; border-radius:10px;}
-div.report_score_wrap div.scroe_gauge span.danger {width:19%; background-color:#FF0F6B;}
-div.report_score_wrap div.scroe_gauge span.warning {width:36.98630%; background-color:#FF8B03;}
-div.report_score_wrap div.scroe_gauge span.normal {width:74%; background-color:#08CC90;}
-div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26ABFF;}
-/* // 대화 점수 */
-
-
-
-/* home_fam_card ( home_fam_util -> home_fam_card) */
-.home_fam_card {padding:3px 12px 21px 12px; background-color:#fff;}
-.home_fam_card .card_list {display:inline-flex;}
-.home_fam_card .card_list .item {padding:5px 6px 7px;}
-.home_fam_card .card_list .item .inner {width:150px; height:130px; padding:12px; border-radius:12px; background-color:#f7f7f7; box-shadow:0 1px 6px rgba(0,0,0,0.16); text-align:left;}
-.home_fam_card .card_list .item .inner.sos {background-color:#FFEDED;}
-.home_fam_card .card_list .item .inner.time {background-color:#D5EFFF;}
-.home_fam_card .card_list .item .inner.report {background-color:#FFF2D6;}
-.home_fam_card .card_list .item .inner span.ico {display:inline-block; width:40px; height:40px; border-radius:100%; background-color:#fff; overflow:hidden;}
-.home_fam_card .card_list .item .inner strong.txt {display:block; color:#121212; font-size:16px; line-height:24px; font-weight:500; text-align:right;}
-.home_fam_card .card_list .item .inner p.txt {display:block; color:#9F9F9F; font-size:14px; line-height:20px; font-weight:400; text-align:right; white-space:normal;}
-/* // home_fam_card */
-</style>
 </head>
 <body>
 
@@ -114,16 +22,15 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 	<div class="header_wrap">
 		<div class="temp">
 			<div class="util">
-				<button type="button"><span><img src="../../images/common/ico_back.png" alt="이전"></span></button>
+				<button type="button"><span><img src="../../images/common/ico_home.png" alt="이전"></span></button>
 				<!-- <button type="button"><span><img src="../../images/common/ico_home.png" alt="홈"></span></button> -->
-				<button type="button" class="btn_de" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>기본</span></button>
+				<!-- <button type="button" class="btn_de" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>기본</span></button>
 				<button type="button" class="btn_min" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>최소</span></button>
-				<button type="button" class="btn_max" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>최대</span></button>
-				<button type="button" class="btn_ex" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>확장</span></button>
+				<button type="button" class="btn_max" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>최대</span></button> -->
 				<!-- <button type="button" class="btn_del" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>del</span></button>
 				<button type="button" class="btn_add" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>add</span></button> -->
 			</div>
-			<!-- <h1><strong></strong></h1> -->
+			<h1><strong>자녀안전지킴이</strong></h1>
 			<div class="tools">
 				<button type="button"><span><img src="../../images/common/ico_noti.png" alt="알림"></span></button>
 			</div>
@@ -289,7 +196,7 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 						</div>
 						<!-- // user_box -->
 
-						<div class="metric_wrap">
+						<div class="metric_wrap" style="display:none;">
 							<div class="metric_item screen_time">
 								<span class="ico"><img src="../../images/home/ico_home_time.png" alt="이미지"></span>
 								<!-- <span class="ico"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span> -->
@@ -347,6 +254,7 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 						</div>
 						<!-- // metric_wrap -->
 					</div>
+					<!-- // item -->
 
 
 					<div class="item">
@@ -394,7 +302,7 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 						</div>
 						<!-- // user_box -->
 
-						<div class="metric_wrap">
+						<div class="metric_wrap" style="display:none;">
 							<div class="metric_item screen_time">
 								<span class="ico"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span>
 								<div class="report_txt_wrap">
@@ -451,214 +359,8 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 						</div>
 						<!-- // metric_wrap -->
 					</div>
+					<!-- // item -->
 
-
-
-					<div class="item">
-						<div class="user_box">
-							<div class="user_thum">
-								<span class="img"><img src="../../images/temp/img_profile_02.png" alt="이미지"></span>
-							</div>
-							<div class="user_state_wrap">
-								<div class="device_state">
-									<div class="state_item">
-										<!-- <span class="ico"><img src="../../images/home/ico_battery_0.png" alt="배터리 0% 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_battery_50.png" alt="배터리 1~50% 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_battery_99.png" alt="배터리 51~99% 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_battery_100.png" alt="배터리 100% 아이콘"></span> -->
-										<span class="ico"><img src="../../images/home/ico_battery_charge.png" alt="배터리 충전중 아이콘"></span>
-										<!-- <span class="ico"><img src="../../images/home/ico_battery_unable.png" alt="배터리 확인불가 아이콘"></span> -->
-										<span class="txt">충전중</span>
-									</div>
-									<div class="state_item">
-										<!-- <span class="ico"><img src="../../images/home/ico_sound_vibration.png" alt="진동 모드 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_sound_on.png" alt="소리 모드 아이콘"></span> -->
-										<span class="ico"><img src="../../images/home/ico_sound_off.png" alt="무음 모드 아이콘"></span>
-										<!-- <span class="ico"><img src="../../images/home/ico_sound_unable.png" alt="확인 불가 아이콘"></span> -->
-										<span class="txt">무음 모드</span>
-									</div>
-									<div class="state_item">
-										<!-- <span class="ico"><img src="../../images/home/ico_net_wifi.png" alt="와이파이 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_net_data.png" alt="데이터 아이콘"></span> -->
-										<span class="ico"><img src="../../images/home/ico_net_unable.png" alt="확인 불가 아이콘"></span>
-										<span class="txt">확인 불가</span>
-									</div>
-								</div>
-								<!-- // device_state -->
-
-								<div class="user_state">
-									<div class="user_info">
-										<strong class="name">나나</strong>
-										<span class="ico"><img src="../../images/home/ico_home_sos_call.png" alt="긴급 호출 아이콘"></span>
-									</div>
-									<p class="location">서울시 영등포구 여의도동</p>
-								</div>
-								<!-- // user_state -->
-							</div>
-							<!-- // user_state_wrap -->
-						</div>
-						<!-- // user_box -->
-
-						<div class="metric_wrap">
-							<div class="metric_item screen_time">
-								<span class="ico"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span>
-								<div class="report_txt_wrap">
-									<div class="phone_tit">
-										<span class="tit">오늘 사용시간</span>
-									</div>
-									<div class="count_txt_wrap">
-										<strong class="count">16</strong>
-										<span class="txt">시간</span>
-										<strong class="count">15</strong>
-										<span class="txt">분</span>
-									</div>
-								</div>
-							</div>
-							<div class="metric_item message_count">
-								<span class="ico"><img src="../../images/home/ico_home_message_new.png" alt="이미지"></span>
-								<div class="report_txt_wrap">
-									<div class="phone_tit">
-										<span class="tit">유해 메시지</span>
-									</div>
-									<div class="count_txt_wrap">
-										<strong class="count">999+</strong>
-										<span class="txt">건 감지</span>
-									</div>
-								</div>
-							</div>
-							<div class="metric_item chat_report">
-								<span class="ico"><img src="../../images/home/ico_home_score.png" alt="이미지"></span>
-								<div class="report_txt_wrap">
-									<div class="phone_tit">
-										<span class="tit">대화 점수</span>
-									</div>
-									<div class="count_txt_wrap">
-										<strong class="count">37</strong>
-										<span class="txt">점</span>
-									</div>
-								</div>
-
-								<div class="report_score_wrap">
-									<!-- <span class="tag"><img src="../../images/home/ico_score_danger.png" alt="위험"></span>
-									<span class="tag"><img src="../../images/home/ico_score_warning.png" alt="주의"></span> -->
-									<span class="tag"><img src="../../images/home/ico_score_normal.png" alt="보통"></span>
-									<!-- <span class="tag"><img src="../../images/home/ico_score_good.png" alt="양호"></span> -->
-									<div class="scroe_gauge">
-										<!-- <span class="danger"></span>
-										<span class="warning"></span> -->
-										<span class="normal"></span>
-										<!-- <span class="good"></span> -->
-									</div>
-									<!-- // scroe_gauge -->
-								</div>
-								<!-- // report_score_wrap -->
-							</div>
-						</div>
-						<!-- // metric_wrap -->
-					</div>
-
-					<div class="item">
-						<div class="user_box">
-							<div class="user_thum">
-								<span class="img"><img src="../../images/temp/img_profile_02.png" alt="이미지"></span>
-							</div>
-							<div class="user_state_wrap">
-								<div class="device_state">
-									<div class="state_item">
-										<!-- <span class="ico"><img src="../../images/home/ico_battery_0.png" alt="배터리 0% 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_battery_50.png" alt="배터리 1~50% 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_battery_99.png" alt="배터리 51~99% 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_battery_100.png" alt="배터리 100% 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_battery_charge.png" alt="배터리 충전중 아이콘"></span> -->
-										<span class="ico"><img src="../../images/home/ico_battery_unable.png" alt="배터리 확인불가 아이콘"></span>
-										<span class="txt">확인불가</span>
-									</div>
-									<div class="state_item">
-										<!-- <span class="ico"><img src="../../images/home/ico_sound_vibration.png" alt="진동 모드 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_sound_on.png" alt="소리 모드 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_sound_off.png" alt="무음 모드 아이콘"></span> -->
-										<span class="ico"><img src="../../images/home/ico_sound_unable.png" alt="확인 불가 아이콘"></span>
-										<span class="txt">확인 불가</span>
-									</div>
-									<div class="state_item">
-										<span class="ico"><img src="../../images/home/ico_net_wifi.png" alt="와이파이 아이콘"></span>
-										<!-- <span class="ico"><img src="../../images/home/ico_net_data.png" alt="데이터 아이콘"></span>
-										<span class="ico"><img src="../../images/home/ico_net_unable.png" alt="확인 불가 아이콘"></span> -->
-										<span class="txt">ATON_GUEST12312312345</span>
-									</div>
-								</div>
-								<!-- // device_state -->
-
-								<div class="user_state">
-									<div class="user_info">
-										<strong class="name">나나</strong>
-										<span class="ico"><img src="../../images/home/ico_home_sos_call.png" alt="긴급 호출 아이콘"></span>
-									</div>
-									<p class="location">서울시 영등포구 여의도동</p>
-								</div>
-								<!-- // user_state -->
-							</div>
-							<!-- // user_state_wrap -->
-						</div>
-						<!-- // user_box -->
-
-						<div class="metric_wrap">
-							<div class="metric_item screen_time">
-								<span class="ico"><img src="../../images/home/ico_home_time_protect.png" alt="이미지"></span>
-								<div class="report_txt_wrap">
-									<div class="phone_tit">
-										<span class="tit">오늘 사용시간</span>
-									</div>
-									<div class="count_txt_wrap">
-										<strong class="count">16</strong>
-										<span class="txt">시간</span>
-										<strong class="count">15</strong>
-										<span class="txt">분</span>
-									</div>
-								</div>
-							</div>
-							<div class="metric_item message_count">
-								<span class="ico"><img src="../../images/home/ico_home_message_new.png" alt="이미지"></span>
-								<div class="report_txt_wrap">
-									<div class="phone_tit">
-										<span class="tit">유해 메시지</span>
-									</div>
-									<div class="count_txt_wrap">
-										<strong class="count">999+</strong>
-										<span class="txt">건 감지</span>
-									</div>
-								</div>
-							</div>
-							<div class="metric_item chat_report">
-								<span class="ico"><img src="../../images/home/ico_home_score.png" alt="이미지"></span>
-								<div class="report_txt_wrap">
-									<div class="phone_tit">
-										<span class="tit">대화 점수</span>
-									</div>
-									<div class="count_txt_wrap">
-										<strong class="count">37</strong>
-										<span class="txt">점</span>
-									</div>
-								</div>
-
-								<div class="report_score_wrap">
-									<!-- <span class="tag"><img src="../../images/home/ico_score_danger.png" alt="위험"></span>
-									<span class="tag"><img src="../../images/home/ico_score_warning.png" alt="주의"></span>
-									<span class="tag"><img src="../../images/home/ico_score_normal.png" alt="보통"></span> -->
-									<span class="tag"><img src="../../images/home/ico_score_good.png" alt="양호"></span>
-									<div class="scroe_gauge">
-										<!-- <span class="danger"></span>
-										<span class="warning"></span>
-										<span class="normal"></span> -->
-										<span class="good"></span>
-									</div>
-									<!-- // scroe_gauge -->
-								</div>
-								<!-- // report_score_wrap -->
-							</div>
-						</div>
-						<!-- // metric_wrap -->
-					</div>
 
 				</div>
 				<!-- // list -->
@@ -666,7 +368,7 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 			<!-- // home_fam_loc_list -->
 
 
-			<div class="home_fam_card scroll-wrapper">
+			<div class="home_fam_card scroll-wrapper" style="display:none;">
 				<div class="card_list scroll">
 					<div class="item">
 						<div class="inner sos">
@@ -695,7 +397,7 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 			<!-- // home_fam_card -->
 
 	
-			<div class="home_fam_bnr">
+			<div class="home_fam_bnr" style="display:none;">
 				<div class="bnr_slick">
 					<div class="item"><img src="../../images/temp/banner.png" alt="배너"></div>
 					<div class="item"><img src="../../images/temp/banner.png" alt="배너"></div>
@@ -706,7 +408,7 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 			<!-- // home_fam_bnr -->
 
 
-			<div class="home_notice">
+			<div class="home_notice" style="display:none;">
 				<ul>
 					<li><span>공지사항</span></li>
 					<li><span>자주 묻는 질문</span></li>
@@ -716,7 +418,7 @@ div.report_score_wrap div.scroe_gauge span.good {width:95%; background-color:#26
 			<!-- // home_notice -->
 	
 	
-			<div class="home_footer">
+			<div class="home_footer" style="display:none;">
 				<div>
 					<span>서비스 제공사 : (주)아톤</span>
 					<span>개인정보처리방침</span>
@@ -830,10 +532,6 @@ document.querySelector(".btn_min").addEventListener("click", function(){
 document.querySelector(".btn_max").addEventListener("click", function(){
 	homeFamLayer("max");
 })
-document.querySelector(".btn_ex").addEventListener("click", function(){
-	homeFamLayer("ex");
-})
-
 /* // 테스트 스크립트 */
 homeFamLayer("max");
 </script>
