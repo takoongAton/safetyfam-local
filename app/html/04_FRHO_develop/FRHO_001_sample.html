@@ -17,82 +17,8 @@
 </head>
 <body>
 
-<div class="wrap">
-
-	<div class="header_wrap">
-		<div class="temp">
-			<div class="util">
-				<button type="button"><span><img src="../../images/common/ico_back.png" alt="이전"></span></button>
-				<!-- <button type="button"><span><img src="../../images/common/ico_home.png" alt="홈"></span></button> -->
-				<button type="button" class="btn_de" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>기본</span></button>
-				<button type="button" class="btn_min" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>최소</span></button>
-				<button type="button" class="btn_max" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>최대</span></button>
-				<button type="button" class="btn_ex" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>확장</span></button>
-				<!-- <button type="button" class="btn_del" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>del</span></button>
-				<button type="button" class="btn_add" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>add</span></button> -->
-			</div>
-			<!-- <h1><strong></strong></h1> -->
-			<div class="tools">
-				<button type="button"><span><img src="../../images/common/ico_noti.png" alt="알림"></span></button>
-			</div>
-		</div>
-		<!-- // temp 삭제 -->
-	</div>
-	<!-- // header_wrap -->
-
-	<div class="container_wrap">
-
-		<section class="container">
-
-			<div class="content_wrap">
-
-				<div class="content">
-
-					<div><img src="../../images/temp/map.png" alt="" style="height:calc(100vh - 52px);"></div>
-					
-				</div>
-
-				<!-- <div class="content_btm">
-					<div class="btm_btn">
-						<div><button type="button" class="btn_next"><span>더보기</span></button></div>
-					</div>
-				</div> -->
-
-			</div><!-- // content_wrap -->
-			
-		</section><!-- // container -->
-		
-	</div><!-- // container_wrap -->
-
-
-	<!-- <div class="footer_wrap">
-		<div class="btnGroup">
-			<div>
-				<button type="button" class="btn line" disabled=""><span>취소</span></button>
-			</div>
-			<div>
-				<button type="button" class="btn fill"><span>확인</span></button>
-			</div>
-		</div>
-	</div> -->
-	<!-- // footer_wrap (하단 고정 영역) -->
-
-</div><!-- // wrap -->
-
-
-<style>
-.home_fam_layer {position:absolute; bottom:0; left:0; right:0; width:100%; max-width:720px; height:0; max-height:90%; margin:0 auto; transition:all 0.4s ease-in-out; overflow-y:auto;}
-/* .home_fam_layer.de {overflow-y:hidden;} */
-/* .home_fam_layer.min {overflow-y:hidden;} */
-/* .home_fam_layer.max {height:90vh;} */
-</style>
-
-
-
-<div class="layer bottom">
-
 	<div class="home_fam_layer">
-		<div class="layer_triger"><button type="button" class="btn_triger"><span>드래그버튼</span></button></div>
+		<!-- <div class="layer_triger"><button type="button" class="btn_triger"><span>드래그버튼</span></button></div> -->
 
 		<div class="inner">
 			<div class="home_fam_list scroll-wrapper">
@@ -655,9 +581,6 @@
 	</div>
 	<!-- // home_fam_layer -->
 
-</div>
-
-
 
 
 
@@ -683,90 +606,6 @@ $(document).ready(function(){
 	guideSlick();
 })
 
-
-/* 테스트 스크립트 */
-let home_fam_layer = document.querySelector(".home_fam_layer");
-let home_fam_inner = home_fam_layer.querySelector(".inner");
-let keepClass = "home_fam_layer";
-let maxHeight = window.outerHeight * 0.9;
-
-let layer_triger = document.querySelector(".layer_triger")
-let home_fam_list = document.querySelector(".home_fam_list");
-let home_fam_loc_list = document.querySelector(".home_fam_loc_list");
-
-let home_fam_card = document.querySelector(".home_fam_card");
-let home_fam_bnr = document.querySelector(".home_fam_bnr");
-let home_fam_list_items = home_fam_list.querySelectorAll(".home_fam_sel");
-
-// home_fam_list_items.forEach(function(item){
-// 	item.addEventListener("click", function(){
-// 		let home_fam_loc_list = document.querySelector(".home_fam_loc_list");
-// 		home_fam_loc_list.style.display = "block";
-// 		homeFamLayer("max");
-// 	})
-// })
-
-function homeFamLayer(aa){
-	let addClass = aa;
-	home_fam_layer.removeAttribute("style");
-	home_fam_layer.className = keepClass;
-
-	let home_fam_loc_list = document.querySelector(".home_fam_loc_list");
-	let metricItem = home_fam_loc_list.querySelectorAll(".metric_wrap");
-	let tempHeight;
-
-	if(addClass == "ex") {
-		metricItem.forEach(function(item){
-			item.style.display = "block";
-		})
-	} else {
-		metricItem.forEach(function(item){
-			item.style.display = "none";
-		})
-	}
-
-	if(addClass == "de" || addClass == "min") {
-		
-		if(addClass == "de") {
-			// tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + home_fam_card.clientHeight + home_fam_bnr.clientHeight + "px";
-			tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + home_fam_loc_list.clientHeight + home_fam_bnr.clientHeight + "px";
-		} else {
-			tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + "px";
-		}
-		home_fam_layer.style.height = tempHeight;
-		home_fam_layer.classList.add(addClass);
-		// home_fam_loc_list.style.display = "none";
-		home_fam_card.style.display = "none";
-		home_fam_layer.style.overflowY = "hidden";
-	} else if(addClass == "max" || addClass == "ex") {
-		// home_fam_loc_list.style.display = "block";
-		home_fam_card.style.display = "block";
-
-		if(home_fam_inner.clientHeight <= maxHeight) {
-			home_fam_layer.style.height = home_fam_inner.clientHeight + layer_triger.clientHeight + "px";
-		} else {
-			home_fam_layer.style.height = "calc(100% - 76px)";
-		}
-		home_fam_layer.style.overflowY = "auto";
-	}
-
-	home_fam_layer.scrollTo(0, 0);
-	console.log(addClass)
-}
-homeFamLayer("de");
-
-document.querySelector(".btn_de").addEventListener("click", function(){
-	homeFamLayer("de");
-})
-document.querySelector(".btn_min").addEventListener("click", function(){
-	homeFamLayer("min");
-})
-document.querySelector(".btn_max").addEventListener("click", function(){
-	homeFamLayer("max");
-})
-document.querySelector(".btn_ex").addEventListener("click", function(){
-	homeFamLayer("ex");
-})
 </script>
 
 </body>

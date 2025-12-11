@@ -27,7 +27,6 @@
 				<button type="button" class="btn_de" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>기본</span></button>
 				<button type="button" class="btn_min" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>최소</span></button>
 				<button type="button" class="btn_max" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>최대</span></button>
-				<button type="button" class="btn_ex" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>확장</span></button>
 				<!-- <button type="button" class="btn_del" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>del</span></button>
 				<button type="button" class="btn_add" style="background-color:#ff6600; border-radius:2px; color:#fff"><span>add</span></button> -->
 			</div>
@@ -487,13 +486,11 @@ let home_fam_card = document.querySelector(".home_fam_card");
 let home_fam_bnr = document.querySelector(".home_fam_bnr");
 let home_fam_list_items = home_fam_list.querySelectorAll(".home_fam_sel");
 
-// home_fam_list_items.forEach(function(item){
-// 	item.addEventListener("click", function(){
-// 		let home_fam_loc_list = document.querySelector(".home_fam_loc_list");
-// 		home_fam_loc_list.style.display = "block";
-// 		homeFamLayer("max");
-// 	})
-// })
+home_fam_list_items.forEach(function(item){
+	item.addEventListener("click", function(){
+		homeFamLayer("max");
+	})
+})
 
 function homeFamLayer(aa){
 	let addClass = aa;
@@ -502,19 +499,22 @@ function homeFamLayer(aa){
 
 	let home_fam_loc_list = document.querySelector(".home_fam_loc_list");
 	let metricItem = home_fam_loc_list.querySelectorAll(".metric_wrap");
+	metricItem.forEach(function(item){
+		item.style.display = "none";
+	})
+
 	let tempHeight;
 
-	if(addClass == "ex") {
-		metricItem.forEach(function(item){
-			item.style.display = "block";
-		})
+	if(addClass == "min") {
+		home_fam_layer.style.overflowY = "hidden";
 	} else {
-		metricItem.forEach(function(item){
-			item.style.display = "none";
-		})
+		home_fam_layer.style.overflowY = "auto";
 	}
 
 	if(addClass == "de" || addClass == "min") {
+		metricItem.forEach(function(item){
+			item.style.display = "none";
+		})
 		
 		if(addClass == "de") {
 			// tempHeight = layer_triger.clientHeight + home_fam_list.offsetHeight + home_fam_card.clientHeight + home_fam_bnr.clientHeight + "px";
@@ -525,19 +525,19 @@ function homeFamLayer(aa){
 		}
 		home_fam_layer.style.height = tempHeight;
 		home_fam_layer.classList.add(addClass);
-		// home_fam_loc_list.style.display = "none";
-		home_fam_card.style.display = "none";
-		home_fam_layer.style.overflowY = "hidden";
-	} else if(addClass == "max" || addClass == "ex") {
-		// home_fam_loc_list.style.display = "block";
-		home_fam_card.style.display = "block";
+		metricItem.forEach(function(item){
+			item.style.display = "none";
+		})
+	} else if(addClass == "max") {
+		metricItem.forEach(function(item){
+			item.style.display = "block";
+		})
 
 		if(home_fam_inner.clientHeight <= maxHeight) {
 			home_fam_layer.style.height = home_fam_inner.clientHeight + layer_triger.clientHeight + home_fam_bnr.clientHeight +"px";
 		} else {
 			home_fam_layer.style.height = "calc(100% - 76px)";
 		}
-		home_fam_layer.style.overflowY = "auto";
 	}
 
 	home_fam_layer.scrollTo(0, 0);
@@ -553,9 +553,6 @@ document.querySelector(".btn_min").addEventListener("click", function(){
 })
 document.querySelector(".btn_max").addEventListener("click", function(){
 	homeFamLayer("max");
-})
-document.querySelector(".btn_ex").addEventListener("click", function(){
-	homeFamLayer("ex");
 })
 </script>
 
