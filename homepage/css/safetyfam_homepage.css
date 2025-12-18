@@ -390,7 +390,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 /* 안내 문구 */
 .unaccount_wrap .guide_txt {margin-top:24px; font-size:0.75em;}
 .unaccount_wrap .guide_txt p + p {margin-top:12px;}
-.unaccount_wrap .guide_txt p.em {color:#ff0000; line-height:1.66666em;}
+.unaccount_wrap .guide_txt p.em {color:#ff0000; line-height:1.66666em; font-weight:500;}
 .unaccount_wrap .guide_txt p.txt {color:#888; line-height:1.55555em;}
 @media only screen and (min-width:720px) {
 	.unaccount_wrap .guide_txt {margin-top:60px; font-size:1em;}

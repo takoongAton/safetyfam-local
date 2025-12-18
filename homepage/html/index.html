@@ -26,7 +26,7 @@
 			<ul class="gnb" id="menu">
 				<li data-menuanchor="page2"><a href="./index.html#section0" class="active"><span>서비스 소개</span></a></li>
 				<li data-menuanchor="page3"><a href="./index.html#section2"><span>서비스 이용방법</span></a></li>
-				<li data-menuanchor="page4"><a href="./index.html#section3"><span>서비스 가입/해지</span></a></li>
+				<li data-menuanchor="page4"><a href="./index.html#section3"><span>서비스 해지/환불</span></a></li>
 				<li data-menuanchor="page5"><a href="notice_list.html"><span>공지사항</span></a></li>
 				<li><a href="customer.html"><span>1:1 문의</span></a></li>
 			</ul>
@@ -208,13 +208,13 @@
 	<div class="section" id="section3">
 
 		<div class="unaccount_wrap">
-			<div class="tit"><strong>자녀안전지킴이 서비스 가입/해지</strong></div>
+			<div class="tit"><strong>자녀안전지킴이 서비스 해지/환불</strong></div>
 			<!-- <p class="error_txt">현재 LG U+, KT 고객만 가입 가능합니다.</p> -->
 
-			<div class="signTab">
+			<!-- <div class="signTab">
 				<button type="button" class="active"><span>서비스 가입</span></button>
 				<button type="button"><span>서비스 해지</span></button>
-			</div>
+			</div> -->
 
 
 			<div class="sign_wrap">
@@ -247,7 +247,7 @@
 					</div>
 					<!-- // telecoms -->
 
-					<div class="agree_wrap">
+					<!-- <div class="agree_wrap">
 						<div class="row">
 							<strong>약관 동의</strong>
 							<div class="check_wrap">
@@ -298,7 +298,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- // agree_wrap -->
 
 					<!-- <div class="identify_wrap">
@@ -344,13 +344,14 @@
 		
 		
 					<div class="btn">
-						<button type="button" class="btn_xx"><strong>자녀안전지킴이 서비스 유료 가입하기</strong></button>
+						<button type="button" class="btn_xx"><strong>자녀안전지킴이 서비스 유료 해지</strong></button>
 					</div>
 
 				</div>
 				<!-- // tab_content -->
 
-				<div class="tab_content">
+				<!-- 사용 안함 -->
+				<div class="tab_content" style="display:none;">
 
 					<div class="telecoms">
 						<div class="row">
@@ -743,7 +744,7 @@ signTabs.forEach(function (item, index) {
 });
 
 let ddd = document.querySelector(".signTab button.active"); // 처음에 보여지고 싶은거.
-ddd.click();
+// ddd.click();
 /* 가입/해지 탭 */
 
 
