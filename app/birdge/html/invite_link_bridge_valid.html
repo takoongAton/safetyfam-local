@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>자녀안전지킴이 - 초대링크 브릿지(초대코드 유효)</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+
+	<!-- css -->
+	<!-- <link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/safetyfam_app.css" /> -->
+
+	<style>
+		* {box-sizing:border-box; margin:0; padding:0; border:0 none; list-style:none;}
+		html, body {height:100%;}
+		
+		.bridge_wrap,.bridge_container {height:100%;}
+		/* 초대링크 전용 브릿지 페이지(Webview) - 초대코드 유효 상태 */
+		.bridge_content {display:flex; flex-direction:column; align-items:center; width:100%; padding:0 18px; text-align:center;}
+		.bridge_content.divide {height:100%; justify-content:space-between;}
+		.bridge_content.expired {margin-top:100px;}
+		.bridge_content.expired.bridge_content_btm {margin-top:127px;}
+
+		.bridge_content_center {flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center;}
+		.bridge_title {color:#000; font-size:20px; line-height:28px; font-weight:700;}
+		.bridge_icon {display:block; width:160px; margin-top:24px;}
+
+		.bridge_code_wrap {width:100%; padding:0 0 36px;}
+
+		.bridge_desc {color:#000; font-size:18px; line-height:26px; font-weight:400; word-break:keep-all; text-align:center;}
+		.bridge_content.expired .bridge_desc {margin-top:124px;}
+
+		.bridge_code_box {display:flex; justify-content:space-between; align-items:center; width:100%; height:48px; margin-top:24px; padding:12px 18px; background-color:#fff; border:1px solid #27AAFF; border-radius:12px;}
+		.bridge_code_box div {flex:1; text-align:right;}
+		.bridge_code_box span.label {color:#A3A3A3; font-size:14px; line-height:20px; font-weight:400;}
+		.bridge_code_box input.code_ipt {flex:1; color:#27AAFF; font-size:16px; line-height:24px; font-weight:700; letter-spacing:0.5px; text-align:right; outline:0;}
+		.bridge_code_box input::placeholder {color:#27AAFF;}
+		.bridge_hint {margin-top:12px; color:#A3A3A3; font-size:14px; line-height:20px; text-align:center;}
+		.bridge_content_btm {width:100%;}
+		.bridge_content_btm .btm_btn button.btn_next {width:100%; height:50px; margin-bottom:60px; border-radius:12px; background-color:#3B3B3B; color:#fff;}
+		.bridge_content_btm .btm_btn span {color:#fff; font-size:16px; line-height:24px;}
+	</style>
+</head>
+<body>
+
+
+
+	<div class="bridge_wrap">
+		<div class="bridge_container">
+			<div class="bridge_content divide">
+				<div class="bridge_content_center">
+					<strong class="bridge_title">자녀안전지킴이</strong>
+					<img class="bridge_icon" src="../../images/bridge/img_appicon.png" alt="자녀안전지킴이">
+				</div>
+				<div class="bridge_content_btm">
+					<div class="bridge_code_wrap">
+						<p class="bridge_desc">초대코드를 등록하고<br>보호자와 안전 상태를 공유해요</p>
+
+						<div class="bridge_code_box">
+							<span class="label">초대 코드</span>
+							<div>
+								<input type="text" class="code_ipt" placeholder="%초대코드%">
+							</div>
+							<!-- <strong class="code"></strong> -->
+						</div>
+						<p class="bridge_hint">아래 버튼을 누르면 초대 코드가 자동으로 복사돼요</p>
+					</div>
+					<!-- // bridge_code_wrap -->
+					
+					<div class="btm_btn">
+						<div><button type="button" class="btn_next"><span>코드 등록하러 바로가기</span></button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // bridge_wrap -->
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../js/temp.js"></script> -->
+
+</body>
+</html>
