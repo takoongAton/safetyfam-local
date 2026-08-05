@@ -560,3 +560,23 @@ div.report_score_wrap div.scroe_gauge span.good {width:2%; background-color:#26A
 @keyframes ani_sos {0% {margin-left:0; transform:translate(-50%,-50%) rotate(0deg);} 14% {margin-left:1px; transform:translate(-50%,-50%) rotate(-0.6deg);} 28% {margin-left:-1px; transform:translate(-50%,-50%) rotate(0.6deg);} 42% {margin-left:1px; transform:translate(-50%,-50%) rotate(-0.6deg);} 56% {margin-left:-1px; transform:translate(-50%,-50%) rotate(0.6deg);} 70% {margin-left:1px; transform:translate(-50%,-50%) rotate(-0.6deg);} 84% {margin-left:-1px; transform:translate(-50%,-50%) rotate(0.6deg);} 100% {margin-left:0;transform:translate(-50%,-50%) rotate(0deg);}}
 /* @keyframes ani_sos_ico {0% {top:0px;} 50% {top:1px;} 100% {top:0px;}} */
 /* // 레이어팝업 sos */
+
+
+
+
+/* 주변 상황 감지 */
+.home_ambient_around {display:flex; justify-content:space-between; align-items:center; gap:8px; height:60px; margin-top:8px; padding:0 12px; border-radius:12px; background-color:#fff; box-shadow:0 1px 6px rgba(0,0,0,0.16);}
+.home_ambient_around div.ico {width:36px; min-width:36px; height:36px;}
+.home_ambient_around div.ico div.img {position:relative;}
+.home_ambient_around div.txt_wrap {flex:1; text-align:left;}
+.home_ambient_around div.txt_wrap strong {display:block; color:#000; font-size:14px; line-height:20px; font-weight:500;}
+.home_ambient_around div.txt_wrap p.txt {color:#9F9F9F; font-size:11px; line-height:16px; font-weight:500;}
+.home_ambient_around button.btn_start {width:65px; height:36px; border:1px solid #000; border-radius:11px;}
+.home_ambient_around button.btn_start span {display:block; color:#000; font-size:12px; line-height:17px; font-weight:700; letter-spacing:-0.05em;}
+.home_ambient_around.active {box-shadow: inset 0 0 0 1px #FF0F6B, 0 1px 6px rgba(0,0,0,0.16);}
+.home_ambient_around.active div.ico div.img::before {content:""; display:block; position:absolute; top:0; right:0; width:4px; height:4px; background-color:#FF1F1F; border-radius:100%; animation: ani_reddot 1.2s infinite ease-in-out;}
+@keyframes ani_reddot {
+	0%,100% {transform:scale(1);}
+	50% {transform:scale(0.6);}
+}
+/* // 주변 상황 감지 */
